@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sobre mí</title>
+  <title>Mi primera web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -32,6 +32,27 @@
     .contenedor {
       padding: 40px 20px;
     }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #00c3ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0099cc;
+    }
+
+    img {
+      max-width: 90%;
+      border-radius: 12px;
+      margin-top: 25px;
+    }
   </style>
 </head>
 
@@ -44,11 +65,28 @@
   </nav>
 
   <div class="contenedor">
-    <h1>Sobre mí</h1>
-    <p>
-      Hola, soy Daniel. Estoy aprendiendo programación paso a paso 😄
+    <h1>Hola, soy Daniel 👋</h1>
+
+    <p id="texto">
+      Esta es mi primera página web publicada en Internet 😄
     </p>
+
+    <button onclick="cambiarTexto()">
+      Haz clic aquí
+    </button>
+
+    <br>
+
+    <img src="gato.png" alt="Gato portada">
+
   </div>
+
+  <script>
+    function cambiarTexto() {
+      document.getElementById("texto").innerText =
+        "¡El texto cambió! 🚀 Estoy aprendiendo programación paso a paso.";
+    }
+  </script>
 
 </body>
 </html>
