@@ -1,110 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Primera Web</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Sobre mí</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+    }
 
-        /* MENÚ */
-        nav {
-            background: #222;
-            padding: 15px;
-            text-align: center;
-        }
+    nav {
+      background: #222;
+      padding: 15px;
+    }
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        nav a:hover {
-            color: #00c3ff;
-        }
+    nav a:hover {
+      color: #00c3ff;
+    }
 
-        /* CONTENIDO */
-        .contenedor {
-            padding: 30px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        button {
-            padding: 12px 25px;
-            font-size: 16px;
-            border: none;
-            background: #00c3ff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #0099cc;
-        }
-
-        img {
-            width: 250px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-    </style>
+    .contenedor {
+      padding: 40px 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- MENÚ -->
-    <nav>
-       <nav>
-  <a href="index.html">Inicio</a>
-  <a href="sobre.html">Sobre mí</a>
-  <a href="contacto.html">Contacto</a>
-</nav>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre.html">Sobre mí</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 
- 
-    </nav>
-
-    <!-- CONTENIDO -->
-    <div class="contenedor">
-        <h1>Hola, soy Daniel 👋</h1>
-
-        <p id="texto">
-            Esta es mi primera página web publicada en Internet 😄
-        </p>
-
-        <button onclick="cambiarTexto()">
-            Haz clic aquí
-        </button>
-
-        <br>
-
-        <img src="gato.png" alt="Imagen">
-    </div>
-
-    <!-- JAVASCRIPT -->
-    <script>
-        function cambiarTexto() {
-            document.getElementById("texto").innerText =
-                "¡El texto cambió! 🚀 Estoy aprendiendo programación paso a paso.";
-        }
-    </script>
+  <div class="contenedor">
+    <h1>Sobre mí</h1>
+    <p>
+      Hola, soy Daniel. Estoy aprendiendo programación paso a paso 😄
+    </p>
+  </div>
 
 </body>
 </html>
-
-
