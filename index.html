@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi primera web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f0f8f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* MENÚ */
+    nav {
+      background-color: #00695c;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTENIDO */
+    .contenedor {
+      padding: 30px 15px;
+    }
+
+    h1 {
+      color: #00695c;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 280px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #00695c;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENÚ -->
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Sobre mí</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <div class="contenedor">
+
+    <h1>Hola, soy Daniel</h1>
+
+    <p id="texto">
+      Bienvenido a mi primera página web
+    </p>
+
+    <img src="gato.png" alt="Gato ingeniero">
+
+    <br>
+
+    <button onclick="cambiarTexto()">Haz clic aquí</button>
+
+  </div>
+
+  <script>
+    function cambiarTexto() {
+      document.getElementById("texto").innerText =
+        "🚀 Estoy aprendiendo programación sin estrés 😄";
+    }
+  </script>
+
+</body>
+</html>
