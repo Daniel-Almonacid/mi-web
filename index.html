@@ -39,7 +39,7 @@
       text-align: center;
     }
 
-    /* TARJETAS */
+    /* GRID Y TARJETAS */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,7 +82,7 @@
     <div class="contenedor">
       <h1>Hola, soy Daniel 👋</h1>
       <p style="text-align:center;">
-        Este es mi portafolio web y catálogo de muebles de melamina
+        Portafolio web y catálogo de muebles de melamina
       </p>
     </div>
   </section>
@@ -120,17 +120,28 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto">
+  <section id="contacto" style="background:#f4f6f8;">
     <div class="contenedor">
       <h2>Contacto</h2>
-      <p style="text-align:center;">
-        📧 danieldarioalmonacidpaytan@gmail.com
-      </p>
-      <p style="text-align:center;">
-        <a href="https://github.com/Daniel-Almonacid" target="_blank">
-          GitHub
-        </a>
-      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>📧 Email</h3>
+          <p>danieldarioalmonacidpaytan@gmail.com</p>
+        </div>
+
+        <div class="card">
+          <h3>📱 WhatsApp</h3>
+          <p>+51 9XX XXX XXX</p>
+        </div>
+
+        <div class="card">
+          <h3>📍 Ubicación</h3>
+          <p>Lima, Perú</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
