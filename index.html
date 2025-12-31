@@ -44,7 +44,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      align-items: start;
     }
 
     .card {
@@ -57,7 +56,10 @@
 
     .card img {
       width: 100%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 8px;
+      margin-bottom: 10px;
     }
 
     /* FORMULARIO */
@@ -120,31 +122,31 @@
       <div class="grid">
 
         <div class="card">
-          <img src="gato.png" alt="Escritorio">
+          <img src="Escritorio1.jpg" alt="Escritorio de melamina">
           <h3>Escritorio moderno</h3>
-          <p>Melamina de 18 mm, ideal para oficina o estudio.</p>
+          <p>Escritorio de melamina resistente, ideal para estudio u oficina.</p>
           <strong>S/ 450</strong>
         </div>
 
         <div class="card">
-          <img src="gato.png" alt="Closet">
-          <h3>Closet 2 puertas</h3>
-          <p>Diseño funcional, resistente y elegante.</p>
-          <strong>S/ 950</strong>
+          <img src="Escritorio2.jpg" alt="Escritorio ejecutivo">
+          <h3>Escritorio ejecutivo</h3>
+          <p>Diseño amplio, elegante y funcional para trabajo profesional.</p>
+          <strong>S/ 650</strong>
         </div>
 
         <div class="card">
-          <img src="gato.png" alt="Mueble TV">
-          <h3>Mueble para TV</h3>
-          <p>Minimalista, adaptable a cualquier sala.</p>
-          <strong>S/ 600</strong>
+          <img src="Escritorio3.jpg" alt="Escritorio compacto">
+          <h3>Escritorio compacto</h3>
+          <p>Perfecto para espacios pequeños, práctico y moderno.</p>
+          <strong>S/ 380</strong>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO (FORMULARIO FUNCIONAL) -->
+  <!-- CONTACTO -->
   <section id="contacto" style="background:#f4f6f8;">
     <div class="contenedor">
       <h2>Contacto</h2>
@@ -157,10 +159,7 @@
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu correo" required>
             <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
-
-            <!-- Opcional: asunto del correo -->
             <input type="hidden" name="_subject" value="Nuevo mensaje desde mi web">
-
             <button type="submit">Enviar mensaje</button>
           </form>
 
