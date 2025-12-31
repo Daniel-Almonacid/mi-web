@@ -16,13 +16,13 @@
   </nav>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <main style="padding:40px; max-width:800px; margin:auto; background:white; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-top:40px;">
+  <main style="padding:40px; max-width:800px; margin:40px auto; background:white; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
 
     <h1>Hola, soy Daniel 👋</h1>
 
     <p>
-      ¡El texto cambió! 🚀  
-      Estoy aprendiendo programación paso a paso y esta es mi primera página web publicada en Internet 😄
+      ¡Estoy aprendiendo programación paso a paso! 🚀  
+      Esta es mi primera página web publicada en Internet 😄
     </p>
 
     <img src="gato.png" alt="Mi imagen"
@@ -30,8 +30,22 @@
 
     <br><br>
 
-    <button onclick="cambiarTexto()"
-            style="padding:12px 25px; font-size:16px; background:#0d6efd; color:white; border:none; border-radius:6px; cursor:pointer;">
+    <!-- BOTÓN ANIMADO -->
+    <button
+      onclick="cambiarTexto()"
+      style="
+        padding:12px 25px;
+        font-size:16px;
+        background:#0d6efd;
+        color:white;
+        border:none;
+        border-radius:6px;
+        cursor:pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      "
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 15px rgba(0,0,0,0.2)'"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
+    >
       Haz clic aquí
     </button>
 
@@ -41,17 +55,19 @@
 
   <!-- FOOTER -->
   <footer style="margin-top:50px; padding:20px; background:#333; color:white;">
-    <p>Sígueme en:</p>
+    <p>Sígueme en redes:</p>
     <a href="#" style="color:white; margin:10px;">Facebook</a>
     <a href="#" style="color:white; margin:10px;">Instagram</a>
-    <a href="#" style="color:white; margin:10px;">GitHub</a>
+    <a href="https://github.com/Daniel-Almonacid" target="_blank" style="color:white; margin:10px;">GitHub</a>
+
+    <p style="margin-top:10px;">© 2025 · Daniel Almonacid</p>
   </footer>
 
   <!-- SCRIPT -->
   <script>
     function cambiarTexto() {
       document.getElementById("mensaje").innerText =
-        "¡Funciona! 😄 El botón cambió el texto correctamente.";
+        "¡Excelente! 🎉 El botón ahora tiene animación profesional.";
     }
   </script>
 
