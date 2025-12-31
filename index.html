@@ -42,21 +42,46 @@
     /* GRID Y TARJETAS */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      align-items: start;
     }
 
     .card {
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 15px;
+      padding: 20px;
       text-align: center;
     }
 
     .card img {
       width: 100%;
       border-radius: 8px;
+    }
+
+    /* FORMULARIO */
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    form button {
+      padding: 12px 25px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    form button:hover {
+      background: #0b5ed7;
     }
 
     footer {
@@ -119,29 +144,24 @@
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- CONTACTO (FORMULARIO) -->
   <section id="contacto" style="background:#f4f6f8;">
     <div class="contenedor">
       <h2>Contacto</h2>
 
       <div class="grid">
-
         <div class="card">
-          <h3>📧 Email</h3>
-          <p>danieldarioalmonacidpaytan@gmail.com</p>
-        </div>
+          <h3>✉️ Envíame un mensaje</h3>
 
-        <div class="card">
-          <h3>📱 WhatsApp</h3>
-          <p>+51 9XX XXX XXX</p>
+          <form action="https://formspree.io/f/xregwozo" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+          </form>
         </div>
-
-        <div class="card">
-          <h3>📍 Ubicación</h3>
-          <p>Lima, Perú</p>
-        </div>
-
       </div>
+
     </div>
   </section>
 
