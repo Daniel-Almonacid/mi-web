@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Almonacid | Portafolio</title>
+  <title>Daniel Almonacid | Muebles de Melamina</title>
 
   <style>
     body {
@@ -29,7 +29,7 @@
       padding: 40px 20px;
     }
 
-    img {
+    .hero img {
       max-width: 250px;
       border-radius: 10px;
       margin: 15px 0;
@@ -47,11 +47,12 @@
       background: white;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     .card img {
       width: 100%;
+      border-radius: 8px;
     }
 
     form {
@@ -82,18 +83,54 @@
       margin-top: 40px;
     }
 
+    footer a {
+      color: white;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    /* BOTÓN WHATSAPP */
     .whatsapp {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 25px;
+      right: 25px;
       background: #25D366;
       color: white;
-      font-size: 28px;
-      padding: 15px 18px;
-      border-radius: 50%;
+      font-size: 18px;
+      padding: 16px 22px;
+      border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
       z-index: 1000;
+      animation: pulso 1.6s infinite;
+    }
+
+    .whatsapp .icono {
+      font-size: 26px;
+    }
+
+    .whatsapp:hover {
+      background: #1ebe5d;
+      transform: scale(1.06);
+    }
+
+    @keyframes pulso {
+      0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+      70%  { box-shadow: 0 0 0 22px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+
+    @media (max-width: 600px) {
+      .whatsapp .texto {
+        display: none;
+      }
+      .whatsapp {
+        padding: 18px;
+        border-radius: 50%;
+      }
     }
   </style>
 </head>
@@ -106,7 +143,7 @@
   <a href="#contacto">Contacto</a>
 </header>
 
-<section id="inicio">
+<section id="inicio" class="hero">
   <h1>Hola, soy Daniel 👋</h1>
   <p>Fabricación de muebles de melamina a medida</p>
   <img src="gato.png" alt="Imagen principal">
@@ -149,16 +186,19 @@
 
 <footer>
   <p>Sígueme en redes</p>
-  <a href="https://facebook.com" style="color:white;">Facebook</a> |
-  <a href="https://instagram.com" style="color:white;">Instagram</a> |
-  <a href="https://github.com/Daniel-Almonacid" style="color:white;">GitHub</a>
+  <a href="https://facebook.com">Facebook</a>
+  <a href="https://instagram.com">Instagram</a>
+  <a href="https://github.com/Daniel-Almonacid">GitHub</a>
   <p>© 2025 Daniel Almonacid</p>
 </footer>
 
 <!-- BOTÓN WHATSAPP -->
 <a href="https://wa.me/51914926262?text=Hola%20Daniel,%20vi%20tu%20catálogo%20de%20muebles%20y%20quiero%20información"
    class="whatsapp"
-   target="_blank">💬</a>
+   target="_blank">
+  <span class="icono">💬</span>
+  <span class="texto">WhatsApp</span>
+</a>
 
 </body>
 </html>
