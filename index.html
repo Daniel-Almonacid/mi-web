@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Almonacid | Muebles de Melamina</title>
+  <title>Muebles de Melamina | Daniel Almonacid</title>
 
   <style>
     body {
       margin: 0;
       background: #f5f7fa;
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      text-align: center;
-    }
-
-    h1, h2, h3 {
-      color: #2c3e50;
+      color: #333;
     }
 
     header {
-      background: #222;
+      background: #2c3e50;
       padding: 15px;
+      text-align: center;
     }
 
     header a {
@@ -29,56 +26,45 @@
       font-weight: bold;
     }
 
+    header a:hover {
+      text-decoration: underline;
+    }
+
     section {
       padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
     }
 
     .hero img {
-      max-width: 230px;
+      width: 200px;
       border-radius: 10px;
-      margin: 15px 0;
+      margin-top: 20px;
     }
 
-    /* ===== CATÁLOGO ===== */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .card {
       background: white;
-      padding: 15px;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: aparecer 0.8s ease forwards;
-    }
-
-    .card:nth-child(1){animation-delay:.1s}
-    .card:nth-child(2){animation-delay:.2s}
-    .card:nth-child(3){animation-delay:.3s}
-
-    .card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-      transition: all .3s ease;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
     .card img {
       width: 100%;
       border-radius: 8px;
-      cursor: pointer;
     }
 
-    @keyframes aparecer {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ===== BOTÓN COTIZAR ===== */
     .cotizar {
       display: inline-block;
       margin-top: 10px;
@@ -94,12 +80,14 @@
       background: #e68900;
     }
 
-    /* ===== LIGHTBOX ===== */
+    /* LIGHTBOX */
     .lightbox {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
       display: none;
       align-items: center;
       justify-content: center;
@@ -116,75 +104,23 @@
       display: flex;
     }
 
-    /* ===== CONTACTO ===== */
-    form {
-      max-width: 400px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      header a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      section {
+        padding: 25px 10px;
+      }
     }
 
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-    }
-
-    button {
-      background: #222;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* ===== FOOTER ===== */
     footer {
-      background: #222;
+      background: #2c3e50;
       color: white;
       padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 8px;
-      text-decoration: none;
-    }
-
-    /* ===== WHATSAPP ===== */
-    .whatsapp {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: white;
-      font-size: 18px;
-      padding: 16px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      z-index: 1000;
-      animation: pulso 1.6s infinite;
-    }
-
-    .whatsapp .icono { font-size: 26px; }
-
-    @keyframes pulso {
-      0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
-      70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}
-      100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
-    }
-
-    /* ===== CELULAR ===== */
-    @media(max-width:600px){
-      header a{display:block;margin:10px 0}
-      .hero img{max-width:180px}
-      .whatsapp .texto{display:none}
-      .whatsapp{padding:18px;border-radius:50%}
+      text-align: center;
     }
   </style>
 </head>
@@ -194,18 +130,15 @@
 <header>
   <a href="#inicio">Inicio</a>
   <a href="#catalogo">Catálogo</a>
+  <a href="#precios">Precios</a>
   <a href="#contacto">Contacto</a>
 </header>
 
 <section id="inicio" class="hero">
-  <h1>Hola, soy Daniel 👋</h1>
-  <p>Fabricación y venta de muebles de melamina a medida para hogares y negocios</p>
-  <p>
-    ✔ Diseños personalizados<br>
-    ✔ Entrega puntual<br>
-    ✔ Atención directa por WhatsApp
-  </p>
-  <img src="gato.png" alt="Imagen principal">
+  <h1>Muebles de Melamina a Medida</h1>
+  <p>Fabricación y venta de muebles personalizados para hogares y negocios</p>
+  <p>✔ Diseños personalizados<br>✔ Entrega puntual<br>✔ Atención directa por WhatsApp</p>
+  <img src="gato.png" alt="Logo">
 </section>
 
 <section id="catalogo">
@@ -214,55 +147,90 @@
   <div class="cards">
 
     <div class="card">
-      <a href="#img1"><img src="Escritorio1.jpg"></a>
+      <a href="#img1">
+        <img src="Escritorio1.jpg" alt="Escritorio Moderno">
+      </a>
       <h3>Escritorio Moderno</h3>
       <p>Melamina resistente, diseño compacto</p>
-      <a class="cotizar" href="https://wa.me/51914926262?text=Hola%20Daniel,%20quiero%20cotizar%20el%20Escritorio%20Moderno" target="_blank">Cotizar este mueble</a>
+      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno" target="_blank">
+        Cotizar este mueble
+      </a>
     </div>
-    <div id="img1" class="lightbox"><a href="#"><img src="Escritorio1.jpg"></a></div>
 
     <div class="card">
-      <a href="#img2"><img src="Escritorio2.jpg"></a>
+      <a href="#img2">
+        <img src="Escritorio2.jpg" alt="Escritorio Gamer">
+      </a>
       <h3>Escritorio Gamer</h3>
-      <p>Amplio, ideal para PC y accesorios</p>
-      <a class="cotizar" href="https://wa.me/51914926262?text=Hola%20Daniel,%20quiero%20cotizar%20el%20Escritorio%20Gamer" target="_blank">Cotizar este mueble</a>
+      <p>Amplio y moderno</p>
+      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer" target="_blank">
+        Cotizar este mueble
+      </a>
     </div>
-    <div id="img2" class="lightbox"><a href="#"><img src="Escritorio2.jpg"></a></div>
 
     <div class="card">
-      <a href="#img3"><img src="Escritorio3.jpg"></a>
+      <a href="#img3">
+        <img src="Escritorio3.jpg" alt="Escritorio Ejecutivo">
+      </a>
       <h3>Escritorio Ejecutivo</h3>
-      <p>Elegante y funcional</p>
-      <a class="cotizar" href="https://wa.me/51914926262?text=Hola%20Daniel,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo" target="_blank">Cotizar este mueble</a>
+      <p>Elegante para oficina</p>
+      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo" target="_blank">
+        Cotizar este mueble
+      </a>
     </div>
-    <div id="img3" class="lightbox"><a href="#"><img src="Escritorio3.jpg"></a></div>
+
+  </div>
+</section>
+
+<section id="precios">
+  <h2>Tabla de Precios Referenciales</h2>
+  <p>Los precios pueden variar según medidas y diseño</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Escritorio Básico</h3>
+      <p>Desde S/ 350</p>
+      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20un%20Escritorio%20Básico" target="_blank">
+        Cotizar
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Escritorio Gamer</h3>
+      <p>Desde S/ 550</p>
+      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20un%20Escritorio%20Gamer" target="_blank">
+        Cotizar
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Escritorio Ejecutivo</h3>
+      <p>Desde S/ 750</p>
+      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20un%20Escritorio%20Ejecutivo" target="_blank">
+        Cotizar
+      </a>
+    </div>
 
   </div>
 </section>
 
 <section id="contacto">
   <h2>Contacto</h2>
-  <form action="https://formspree.io/f/xregwozo" method="POST">
-    <input type="text" name="nombre" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
-    <button type="submit">Enviar mensaje</button>
-  </form>
+  <p>Escríbeme directamente y te responderé a la brevedad</p>
+  <a class="cotizar" href="https://wa.me/51914926262" target="_blank">
+    Contactar por WhatsApp
+  </a>
 </section>
 
 <footer>
-  <p>Sígueme en redes</p>
-  <a href="https://facebook.com">Facebook</a>
-  <a href="https://instagram.com">Instagram</a>
-  <a href="https://github.com/Daniel-Almonacid">GitHub</a>
-  <p>© 2025 Daniel Almonacid</p>
+  <p>© 2025 Daniel Almonacid – Muebles de Melamina</p>
 </footer>
 
-<a href="https://wa.me/51914926262?text=Hola%20Daniel,%20vi%20tu%20catálogo%20de%20muebles%20y%20quiero%20información"
-   class="whatsapp" target="_blank">
-  <span class="icono">💬</span>
-  <span class="texto">WhatsApp</span>
-</a>
+<!-- LIGHTBOX -->
+<div id="img1" class="lightbox"><a href="#"><img src="Escritorio1.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="Escritorio2.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="Escritorio3.jpg"></a></div>
 
 </body>
 </html>
