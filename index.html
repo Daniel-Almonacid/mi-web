@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi primera web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera web</title>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background-color: #f4f4f4;
       text-align: center;
+      margin: 0;
     }
 
     nav {
@@ -20,24 +20,29 @@
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: #00c3ff;
+      text-decoration: underline;
     }
 
-    .contenedor {
-      padding: 40px 20px;
+    .container {
+      padding: 30px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+      margin: 20px 0;
     }
 
     button {
-      margin-top: 20px;
       padding: 12px 25px;
       font-size: 16px;
-      background: #00c3ff;
+      background: #007bff;
       color: white;
       border: none;
       border-radius: 6px;
@@ -45,29 +50,32 @@
     }
 
     button:hover {
-      background: #0099cc;
+      background: #0056b3;
     }
 
-    img {
-      max-width: 90%;
-      border-radius: 12px;
-      margin-top: 25px;
-    }
-
-    /* 🔥 ANIMACIONES */
-    @keyframes aparecer {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+    /* 📱 RESPONSIVE */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    .animado {
-      animation: aparecer 1s ease-out;
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -80,25 +88,27 @@
     <a href="contacto.html">Contacto</a>
   </nav>
 
-  <div class="contenedor">
-    <h1 class="animado">Hola, soy Daniel 👋</h1>
+  <div class="container">
+    <h1>Hola, soy Daniel 👋</h1>
 
-    <p id="texto" class="animado">
-      Esta es mi primera página web publicada en Internet 😄
+    <p>
+      ¡El texto cambió! 🚀 Estoy aprendiendo programación paso a paso
+      y esta es mi primera página web publicada en Internet 😄
     </p>
 
-    <button onclick="cambiarTexto()" class="animado">
-      Haz clic aquí
-    </button>
+    <img src="gato.png" alt="Imagen principal">
 
-    <!-- IMAGEN -->
-    <img src="./gato.png" alt="Gato portada" class="animado">
+    <br><br>
+
+    <button onclick="cambiarTexto()">Haz clic aquí</button>
+
+    <p id="mensaje"></p>
   </div>
 
   <script>
     function cambiarTexto() {
-      document.getElementById("texto").innerText =
-        "¡El texto cambió! 🚀 Estoy aprendiendo programación paso a paso.";
+      document.getElementById("mensaje").innerText =
+        "¡Funciona! 🎉 Ya sé usar botones con JavaScript";
     }
   </script>
 
