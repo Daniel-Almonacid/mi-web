@@ -64,18 +64,35 @@
     footer {
       background: #222;
       color: #ccc;
-      padding: 20px;
+      padding: 25px 15px;
       font-size: 14px;
     }
 
     footer a {
       color: #ccc;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 10px;
+      display: inline-block;
     }
 
     footer a:hover {
       color: white;
+    }
+
+    .social {
+      margin: 15px 0;
+    }
+
+    .social a {
+      font-size: 15px;
+      padding: 8px 12px;
+      border: 1px solid #444;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    .social a:hover {
+      background: #444;
     }
 
     @keyframes aparecer {
@@ -141,6 +158,12 @@
   </div>
 
   <footer>
+    <div class="social">
+      <a href="https://github.com/Daniel-Almonacid" target="_blank">🐙 GitHub</a>
+      <a href="#" target="_blank">💼 LinkedIn</a>
+      <a href="#" target="_blank">📘 Facebook</a>
+    </div>
+
     © 2025 Daniel Almonacid ·  
     <a href="index.html">Inicio</a> |
     <a href="sobre.html">Sobre mí</a> |
@@ -150,7 +173,7 @@
   <script>
     function cambiarTexto() {
       document.getElementById("mensaje").innerText =
-        "¡Excelente! 🎉 Mi web ya tiene footer profesional";
+        "🚀 Ahora mi web tiene redes sociales como un sitio profesional";
     }
   </script>
 
