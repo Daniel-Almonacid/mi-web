@@ -144,7 +144,7 @@
     </div>
   </section>
 
-  <!-- CONTACTO (FORMULARIO) -->
+  <!-- CONTACTO (FORMULARIO FUNCIONAL) -->
   <section id="contacto" style="background:#f4f6f8;">
     <div class="contenedor">
       <h2>Contacto</h2>
@@ -157,8 +157,13 @@
             <input type="text" name="nombre" placeholder="Tu nombre" required>
             <input type="email" name="email" placeholder="Tu correo" required>
             <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+            <!-- Opcional: asunto del correo -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde mi web">
+
             <button type="submit">Enviar mensaje</button>
           </form>
+
         </div>
       </div>
 
