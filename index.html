@@ -2,180 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi primera web</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    nav {
-      background: #222;
-      padding: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 30px;
-      flex: 1;
-    }
-
-    img {
-      width: 200px;
-      border-radius: 10px;
-      margin: 20px 0;
-      animation: aparecer 1.2s ease;
-    }
-
-    button {
-      padding: 12px 25px;
-      font-size: 16px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    button:hover {
-      background: #0056b3;
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      padding: 25px 15px;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
-    }
-
-    footer a:hover {
-      color: white;
-    }
-
-    .social {
-      margin: 15px 0;
-    }
-
-    .social a {
-      font-size: 15px;
-      padding: 8px 12px;
-      border: 1px solid #444;
-      border-radius: 20px;
-      transition: background 0.3s;
-    }
-
-    .social a:hover {
-      background: #444;
-    }
-
-    @keyframes aparecer {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      button {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      img {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="font-family: Arial, sans-serif; margin:0; padding:0; text-align:center;">
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="sobre.html">Sobre mí</a>
-    <a href="contacto.html">Contacto</a>
+  <!-- MENÚ -->
+  <nav style="background:#333; padding:15px;">
+    <a href="index.html" style="color:white; margin:0 15px; text-decoration:none;">Inicio</a>
+    <a href="sobre.html" style="color:white; margin:0 15px; text-decoration:none;">Sobre mí</a>
+    <a href="contacto.html" style="color:white; margin:0 15px; text-decoration:none;">Contacto</a>
   </nav>
 
-  <div class="container">
+  <!-- CONTENIDO -->
+  <main style="padding:40px;">
     <h1>Hola, soy Daniel 👋</h1>
+    <p>¡Estoy aprendiendo programación paso a paso! 🚀</p>
 
-    <p>
-      Estoy aprendiendo programación paso a paso  
-      y esta es mi primera página web publicada en Internet 😄
-    </p>
+    <img src="gato.png" alt="Mi imagen" style="width:200px; margin-top:20px; border-radius:10px;">
+  </main>
 
-    <img src="gato.png" alt="Imagen principal">
+  <!-- FOOTER CON REDES -->
+  <footer style="margin-top:40px; padding:20px; background:#222; color:white;">
+    <p>Sígueme en redes sociales</p>
 
-    <br><br>
+    <a href="https://facebook.com" target="_blank" style="color:white; margin:0 10px;">Facebook</a>
+    <a href="https://instagram.com" target="_blank" style="color:white; margin:0 10px;">Instagram</a>
+    <a href="https://github.com/Daniel-Almonacid" target="_blank" style="color:white; margin:0 10px;">GitHub</a>
 
-    <button onclick="cambiarTexto()">Haz clic aquí</button>
-
-    <p id="mensaje"></p>
-  </div>
-
-  <footer>
-    <div class="social">
-      <a href="https://github.com/Daniel-Almonacid" target="_blank">🐙 GitHub</a>
-      <a href="#" target="_blank">💼 LinkedIn</a>
-      <a href="#" target="_blank">📘 Facebook</a>
-    </div>
-
-    © 2025 Daniel Almonacid ·  
-    <a href="index.html">Inicio</a> |
-    <a href="sobre.html">Sobre mí</a> |
-    <a href="contacto.html">Contacto</a>
+    <p style="margin-top:10px;">© 2025 · Daniel Almonacid</p>
   </footer>
-
-  <script>
-    function cambiarTexto() {
-      document.getElementById("mensaje").innerText =
-        "🚀 Ahora mi web tiene redes sociales como un sitio profesional";
-    }
-  </script>
 
 </body>
 </html>
