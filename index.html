@@ -37,8 +37,10 @@
       width: 200px;
       border-radius: 10px;
       margin: 20px 0;
+      animation: aparecer 1.2s ease;
     }
 
+    /* 🎯 BOTÓN ANIMADO */
     button {
       padding: 12px 25px;
       font-size: 16px;
@@ -47,13 +49,28 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     button:hover {
       background: #0056b3;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    /* 📱 RESPONSIVE */
+    /* ✨ ANIMACIÓN DE ENTRADA */
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 📱 RESPONSIVE PARA CELULAR */
     @media (max-width: 600px) {
       nav a {
         display: block;
@@ -92,7 +109,8 @@
     <h1>Hola, soy Daniel 👋</h1>
 
     <p>
-      ¡El texto cambió! 🚀 Estoy aprendiendo programación paso a paso
+      ¡El texto cambió! 🚀  
+      Estoy aprendiendo programación paso a paso  
       y esta es mi primera página web publicada en Internet 😄
     </p>
 
@@ -108,7 +126,7 @@
   <script>
     function cambiarTexto() {
       document.getElementById("mensaje").innerText =
-        "¡Funciona! 🎉 Ya sé usar botones con JavaScript";
+        "¡Funciona! 🎉 Ya estoy usando animaciones y JavaScript";
     }
   </script>
 
