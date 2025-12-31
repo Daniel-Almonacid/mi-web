@@ -11,6 +11,9 @@
       background-color: #f4f4f4;
       text-align: center;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     nav {
@@ -31,6 +34,7 @@
 
     .container {
       padding: 30px;
+      flex: 1;
     }
 
     img {
@@ -40,7 +44,6 @@
       animation: aparecer 1.2s ease;
     }
 
-    /* 🎯 BOTÓN ANIMADO */
     button {
       padding: 12px 25px;
       font-size: 16px;
@@ -58,7 +61,23 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    /* ✨ ANIMACIÓN DE ENTRADA */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
     @keyframes aparecer {
       from {
         opacity: 0;
@@ -70,7 +89,6 @@
       }
     }
 
-    /* 📱 RESPONSIVE PARA CELULAR */
     @media (max-width: 600px) {
       nav a {
         display: block;
@@ -109,7 +127,6 @@
     <h1>Hola, soy Daniel 👋</h1>
 
     <p>
-      ¡El texto cambió! 🚀  
       Estoy aprendiendo programación paso a paso  
       y esta es mi primera página web publicada en Internet 😄
     </p>
@@ -123,10 +140,17 @@
     <p id="mensaje"></p>
   </div>
 
+  <footer>
+    © 2025 Daniel Almonacid ·  
+    <a href="index.html">Inicio</a> |
+    <a href="sobre.html">Sobre mí</a> |
+    <a href="contacto.html">Contacto</a>
+  </footer>
+
   <script>
     function cambiarTexto() {
       document.getElementById("mensaje").innerText =
-        "¡Funciona! 🎉 Ya estoy usando animaciones y JavaScript";
+        "¡Excelente! 🎉 Mi web ya tiene footer profesional";
     }
   </script>
 
