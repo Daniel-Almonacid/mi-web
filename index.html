@@ -2,37 +2,58 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi primera web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera web</title>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin:0; padding:0; text-align:center;">
+<body style="font-family: Arial, sans-serif; margin:0; padding:0; text-align:center; background:#f4f6f8;">
 
   <!-- MENÚ -->
-  <nav style="background:#333; padding:15px;">
-    <a href="index.html" style="color:white; margin:0 15px; text-decoration:none;">Inicio</a>
-    <a href="sobre.html" style="color:white; margin:0 15px; text-decoration:none;">Sobre mí</a>
-    <a href="contacto.html" style="color:white; margin:0 15px; text-decoration:none;">Contacto</a>
+  <nav style="background:#0d6efd; padding:15px;">
+    <a href="index.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Inicio</a>
+    <a href="sobre.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Sobre mí</a>
+    <a href="contacto.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Contacto</a>
   </nav>
 
-  <!-- CONTENIDO -->
-  <main style="padding:40px;">
-    <h1>Hola, soy Daniel 👋</h1>
-    <p>¡Estoy aprendiendo programación paso a paso! 🚀</p>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main style="padding:40px; max-width:800px; margin:auto; background:white; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-top:40px;">
 
-    <img src="gato.png" alt="Mi imagen" style="width:200px; margin-top:20px; border-radius:10px;">
+    <h1>Hola, soy Daniel 👋</h1>
+
+    <p>
+      ¡El texto cambió! 🚀  
+      Estoy aprendiendo programación paso a paso y esta es mi primera página web publicada en Internet 😄
+    </p>
+
+    <img src="gato.png" alt="Mi imagen"
+         style="width:200px; margin-top:20px; border-radius:50%; border:4px solid #0d6efd;">
+
+    <br><br>
+
+    <button onclick="cambiarTexto()"
+            style="padding:12px 25px; font-size:16px; background:#0d6efd; color:white; border:none; border-radius:6px; cursor:pointer;">
+      Haz clic aquí
+    </button>
+
+    <p id="mensaje" style="margin-top:20px; font-weight:bold;"></p>
+
   </main>
 
-  <!-- FOOTER CON REDES -->
-  <footer style="margin-top:40px; padding:20px; background:#222; color:white;">
-    <p>Sígueme en redes sociales</p>
-
-    <a href="https://facebook.com" target="_blank" style="color:white; margin:0 10px;">Facebook</a>
-    <a href="https://instagram.com" target="_blank" style="color:white; margin:0 10px;">Instagram</a>
-    <a href="https://github.com/Daniel-Almonacid" target="_blank" style="color:white; margin:0 10px;">GitHub</a>
-
-    <p style="margin-top:10px;">© 2025 · Daniel Almonacid</p>
+  <!-- FOOTER -->
+  <footer style="margin-top:50px; padding:20px; background:#333; color:white;">
+    <p>Sígueme en:</p>
+    <a href="#" style="color:white; margin:10px;">Facebook</a>
+    <a href="#" style="color:white; margin:10px;">Instagram</a>
+    <a href="#" style="color:white; margin:10px;">GitHub</a>
   </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function cambiarTexto() {
+      document.getElementById("mensaje").innerText =
+        "¡Funciona! 😄 El botón cambió el texto correctamente.";
+    }
+  </script>
 
 </body>
 </html>
