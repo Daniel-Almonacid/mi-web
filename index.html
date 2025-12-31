@@ -4,72 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio | Daniel Almonacid</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    nav {
+      background: #0d6efd;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    /* TARJETAS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#333;">
+<body>
 
-  <!-- NAV -->
-  <nav style="background:#0d6efd; padding:15px; text-align:center;">
-    <a href="#inicio" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Inicio</a>
-    <a href="#sobre" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Sobre mí</a>
-    <a href="#proyectos" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Proyectos</a>
-    <a href="#contacto" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Contacto</a>
+  <!-- MENU -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
-  <!-- HERO -->
-  <section id="inicio" style="padding:60px 20px; text-align:center;">
-    <img src="gato.png" alt="Daniel"
-         style="width:160px; border-radius:50%; border:4px solid #0d6efd;">
-    <h1 style="margin-top:20px;">Daniel Almonacid</h1>
-    <p>Aprendiendo desarrollo web | HTML · CSS · JavaScript</p>
-  </section>
-
-  <!-- SOBRE MI -->
-  <section id="sobre" style="background:white; padding:50px 20px;">
-    <div style="max-width:800px; margin:auto;">
-      <h2>Sobre mí</h2>
-      <p>
-        Hola, soy Daniel. Estoy iniciándome en el desarrollo web y este es mi
-        primer portafolio publicado en Internet. Me gusta aprender paso a paso,
-        crear cosas desde cero y mejorar constantemente.
+  <!-- INICIO -->
+  <section id="inicio">
+    <div class="contenedor">
+      <h1>Hola, soy Daniel 👋</h1>
+      <p style="text-align:center;">
+        Este es mi portafolio web y catálogo de muebles de melamina
       </p>
     </div>
   </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" style="padding:50px 20px;">
-    <div style="max-width:900px; margin:auto;">
-      <h2>Proyectos</h2>
+  <!-- CATALOGO -->
+  <section id="catalogo" style="background:white;">
+    <div class="contenedor">
+      <h2>🪑 Catálogo de muebles de melamina</h2>
 
-      <div style="background:white; padding:20px; margin-top:20px; border-radius:8px;">
-        <h3>🌐 Mi primera página web</h3>
-        <p>Página creada con HTML, estilos básicos y publicada con GitHub Pages.</p>
-      </div>
+      <div class="grid">
 
-      <div style="background:white; padding:20px; margin-top:20px; border-radius:8px;">
-        <h3>📄 Portafolio personal</h3>
-        <p>Este sitio web, donde muestro mis avances y aprendizajes.</p>
+        <div class="card">
+          <img src="gato.png" alt="Escritorio">
+          <h3>Escritorio moderno</h3>
+          <p>Melamina de 18 mm, ideal para oficina o estudio.</p>
+          <strong>S/ 450</strong>
+        </div>
+
+        <div class="card">
+          <img src="gato.png" alt="Closet">
+          <h3>Closet 2 puertas</h3>
+          <p>Diseño funcional, resistente y elegante.</p>
+          <strong>S/ 950</strong>
+        </div>
+
+        <div class="card">
+          <img src="gato.png" alt="Mueble TV">
+          <h3>Mueble para TV</h3>
+          <p>Minimalista, adaptable a cualquier sala.</p>
+          <strong>S/ 600</strong>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" style="background:white; padding:50px 20px;">
-    <div style="max-width:600px; margin:auto;">
+  <section id="contacto">
+    <div class="contenedor">
       <h2>Contacto</h2>
-      <p>Puedes encontrarme en:</p>
-
-      <p>
-        <a href="https://github.com/Daniel-Almonacid" target="_blank">GitHub</a> |
-        <a href="#">LinkedIn</a> |
-        <a href="#">Facebook</a>
+      <p style="text-align:center;">
+        📧 danieldarioalmonacidpaytan@gmail.com
+      </p>
+      <p style="text-align:center;">
+        <a href="https://github.com/Daniel-Almonacid" target="_blank">
+          GitHub
+        </a>
       </p>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer style="background:#222; color:white; text-align:center; padding:20px;">
-    © 2025 · Daniel Almonacid · Portafolio personal
+  <footer>
+    © 2025 · Daniel Almonacid · Catálogo de muebles de melamina
   </footer>
 
 </body>
