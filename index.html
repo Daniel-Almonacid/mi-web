@@ -3,73 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi primera web</title>
+  <title>Portafolio | Daniel Almonacid</title>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin:0; padding:0; text-align:center; background:#f4f6f8;">
+<body style="font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#333;">
 
-  <!-- MENÚ -->
-  <nav style="background:#0d6efd; padding:15px;">
-    <a href="index.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Inicio</a>
-    <a href="sobre.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Sobre mí</a>
-    <a href="contacto.html" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Contacto</a>
+  <!-- NAV -->
+  <nav style="background:#0d6efd; padding:15px; text-align:center;">
+    <a href="#inicio" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Inicio</a>
+    <a href="#sobre" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Sobre mí</a>
+    <a href="#proyectos" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Proyectos</a>
+    <a href="#contacto" style="color:white; margin:15px; text-decoration:none; font-weight:bold;">Contacto</a>
   </nav>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main style="padding:40px; max-width:800px; margin:40px auto; background:white; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+  <!-- HERO -->
+  <section id="inicio" style="padding:60px 20px; text-align:center;">
+    <img src="gato.png" alt="Daniel"
+         style="width:160px; border-radius:50%; border:4px solid #0d6efd;">
+    <h1 style="margin-top:20px;">Daniel Almonacid</h1>
+    <p>Aprendiendo desarrollo web | HTML · CSS · JavaScript</p>
+  </section>
 
-    <h1>Hola, soy Daniel 👋</h1>
+  <!-- SOBRE MI -->
+  <section id="sobre" style="background:white; padding:50px 20px;">
+    <div style="max-width:800px; margin:auto;">
+      <h2>Sobre mí</h2>
+      <p>
+        Hola, soy Daniel. Estoy iniciándome en el desarrollo web y este es mi
+        primer portafolio publicado en Internet. Me gusta aprender paso a paso,
+        crear cosas desde cero y mejorar constantemente.
+      </p>
+    </div>
+  </section>
 
-    <p>
-      ¡Estoy aprendiendo programación paso a paso! 🚀  
-      Esta es mi primera página web publicada en Internet 😄
-    </p>
+  <!-- PROYECTOS -->
+  <section id="proyectos" style="padding:50px 20px;">
+    <div style="max-width:900px; margin:auto;">
+      <h2>Proyectos</h2>
 
-    <img src="gato.png" alt="Mi imagen"
-         style="width:200px; margin-top:20px; border-radius:50%; border:4px solid #0d6efd;">
+      <div style="background:white; padding:20px; margin-top:20px; border-radius:8px;">
+        <h3>🌐 Mi primera página web</h3>
+        <p>Página creada con HTML, estilos básicos y publicada con GitHub Pages.</p>
+      </div>
 
-    <br><br>
+      <div style="background:white; padding:20px; margin-top:20px; border-radius:8px;">
+        <h3>📄 Portafolio personal</h3>
+        <p>Este sitio web, donde muestro mis avances y aprendizajes.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- BOTÓN ANIMADO -->
-    <button
-      onclick="cambiarTexto()"
-      style="
-        padding:12px 25px;
-        font-size:16px;
-        background:#0d6efd;
-        color:white;
-        border:none;
-        border-radius:6px;
-        cursor:pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      "
-      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 15px rgba(0,0,0,0.2)'"
-      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
-    >
-      Haz clic aquí
-    </button>
+  <!-- CONTACTO -->
+  <section id="contacto" style="background:white; padding:50px 20px;">
+    <div style="max-width:600px; margin:auto;">
+      <h2>Contacto</h2>
+      <p>Puedes encontrarme en:</p>
 
-    <p id="mensaje" style="margin-top:20px; font-weight:bold;"></p>
-
-  </main>
+      <p>
+        <a href="https://github.com/Daniel-Almonacid" target="_blank">GitHub</a> |
+        <a href="#">LinkedIn</a> |
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer style="margin-top:50px; padding:20px; background:#333; color:white;">
-    <p>Sígueme en redes:</p>
-    <a href="#" style="color:white; margin:10px;">Facebook</a>
-    <a href="#" style="color:white; margin:10px;">Instagram</a>
-    <a href="https://github.com/Daniel-Almonacid" target="_blank" style="color:white; margin:10px;">GitHub</a>
-
-    <p style="margin-top:10px;">© 2025 · Daniel Almonacid</p>
+  <footer style="background:#222; color:white; text-align:center; padding:20px;">
+    © 2025 · Daniel Almonacid · Portafolio personal
   </footer>
-
-  <!-- SCRIPT -->
-  <script>
-    function cambiarTexto() {
-      document.getElementById("mensaje").innerText =
-        "¡Excelente! 🎉 El botón ahora tiene animación profesional.";
-    }
-  </script>
 
 </body>
 </html>
