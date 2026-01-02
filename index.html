@@ -1,210 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muebles de Melamina | Daniel Almonacid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Escritorios - Daniel Almonacid</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f5f7fa;
-  color: #333;
-}
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+      margin:0;
+      padding:0;
+    }
 
-header {
-  background: #2c3e50;
-  padding: 15px;
-  text-align: center;
-}
+    header{
+      background:#222;
+      color:white;
+      padding:15px;
+      text-align:center;
+    }
 
-header a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    nav a{
+      color:white;
+      margin:0 10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
 
-header a:hover {
-  text-decoration: underline;
-}
+    .producto{
+      background:white;
+      padding:20px;
+      margin:20px auto;
+      max-width:900px;
+      border-radius:14px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
 
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
+    .producto h2{
+      margin-top:0;
+    }
 
-h1, h2, h3 {
-  color: #2c3e50;
-}
+    .portada{
+      width:100%;
+      max-width:500px;
+      display:block;
+      margin:15px auto;
+      border-radius:12px;
+    }
 
-.hero img {
-  width: 200px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
+    .galeria{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+    .galeria img{
+      width:100px;
+      border-radius:8px;
+      cursor:pointer;
+      transition:transform .2s;
+    }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-}
+    .galeria img:hover{
+      transform:scale(1.1);
+    }
 
-.galeria {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
+    .btn-whatsapp{
+      display:inline-block;
+      margin-top:15px;
+      padding:12px 25px;
+      background:#25D366;
+      color:white;
+      font-weight:bold;
+      border-radius:30px;
+      text-decoration:none;
+    }
 
-.galeria img {
-  width: 32%;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:15px;
+      margin-top:30px;
+    }
 
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-.cotizar {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 12px 18px;
-  background: #25d366;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-.cotizar:hover {
-  background: #1ebe5d;
-}
-
-@media (max-width: 600px) {
-  header a {
-    display: block;
-    margin: 10px 0;
-  }
-}
-
-footer {
-  background: #2c3e50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-</style>
+    @media(max-width:600px){
+      .galeria img{
+        width:80px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <a href="#inicio">Inicio</a>
-  <a href="#catalogo">Catálogo</a>
-  <a href="#precios">Precios</a>
-  <a href="sobre.html">Sobre la empresa</a>
+  <h1>Daniel Almonacid</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre.html">Sobre mí</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 </header>
 
-<section id="inicio" class="hero">
-  <h1>Muebles de Melamina a Medida</h1>
-  <p>Fabricación y venta de muebles personalizados para hogares y negocios</p>
-  <p>✔ Diseños personalizados<br>✔ Entrega puntual<br>✔ Atención directa por WhatsApp</p>
-  <img src="gato.png" alt="Logo">
-</section>
+<!-- ================= ESCRITORIO 1 ================= -->
+<section class="producto">
+  <h2>Escritorio Moderno</h2>
+  <p>Diseño moderno en melamina, compacto y funcional.</p>
 
-<section id="catalogo">
-  <h2>Catálogo de Escritorios</h2>
+  <img src="imagenes/escritorio1.jpg" class="portada" alt="Escritorio Moderno">
 
-  <div class="cards">
-
-    <!-- ESCRITORIO 1 -->
-    <div class="card">
-      <div class="galeria">
-        <img src="imagenes/escritorio1-1.jpg">
-        <img src="imagenes/escritorio1-2.jpg">
-        <img src="imagenes/escritorio1-3.jpg">
-      </div>
-      <h3>Escritorio Moderno</h3>
-      <p>Diseño moderno en melamina, compacto y funcional.</p>
-      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno" target="_blank">
-        Cotizar este mueble
-      </a>
-    </div>
-
-    <!-- ESCRITORIO 2 -->
-    <div class="card">
-      <div class="galeria">
-        <img src="imagenes/escritorio2-1.jpg">
-        <img src="imagenes/escritorio2-2.jpg">
-        <img src="imagenes/escritorio2-3.jpg">
-      </div>
-      <h3>Escritorio Gamer</h3>
-      <p>Amplio escritorio gamer, ideal para setup completo.</p>
-      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer" target="_blank">
-        Cotizar este mueble
-      </a>
-    </div>
-
-    <!-- ESCRITORIO 3 -->
-    <div class="card">
-      <div class="galeria">
-        <img src="imagenes/escritorio3-1.jpg">
-        <img src="imagenes/escritorio3-2.jpg">
-        <img src="imagenes/escritorio3-3.jpg">
-      </div>
-      <h3>Escritorio Ejecutivo</h3>
-      <p>Elegante escritorio para oficina o negocio.</p>
-      <a class="cotizar" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo" target="_blank">
-        Cotizar este mueble
-      </a>
-    </div>
-
+  <div class="galeria">
+    <img src="imagenes/escritorio1-1.jpg">
+    <img src="imagenes/escritorio1-2.jpg">
+    <img src="imagenes/escritorio1-3.jpg">
+    <img src="imagenes/escritorio1-4.jpg">
   </div>
+
+  <a class="btn-whatsapp"
+     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno"
+     target="_blank">
+     Cotizar este mueble
+  </a>
 </section>
 
-<section id="precios">
-  <h2>Precios Referenciales</h2>
+<!-- ================= ESCRITORIO 2 ================= -->
+<section class="producto">
+  <h2>Escritorio Gamer</h2>
+  <p>Amplio escritorio gamer, ideal para setup completo.</p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Escritorio Básico</h3>
-      <p>Desde S/ 350</p>
-    </div>
+  <img src="imagenes/escritorio2.jpg" class="portada" alt="Escritorio Gamer">
 
-    <div class="card">
-      <h3>Escritorio Gamer</h3>
-      <p>Desde S/ 550</p>
-    </div>
-
-    <div class="card">
-      <h3>Escritorio Ejecutivo</h3>
-      <p>Desde S/ 750</p>
-    </div>
+  <div class="galeria">
+    <img src="imagenes/escritorio2-1.jpg">
+    <img src="imagenes/escritorio2-2.jpg">
+    <img src="imagenes/escritorio2-3.jpg">
+    <img src="imagenes/escritorio2-4.jpg">
   </div>
+
+  <a class="btn-whatsapp"
+     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer"
+     target="_blank">
+     Cotizar este mueble
+  </a>
 </section>
 
-<section id="contacto">
-  <h2>Contacto Directo</h2>
-  <p>Escríbeme y te responderé rápidamente</p>
-  <a class="cotizar" href="https://wa.me/51914926262" target="_blank">
-    Contactar por WhatsApp
+<!-- ================= ESCRITORIO 3 ================= -->
+<section class="producto">
+  <h2>Escritorio Ejecutivo</h2>
+  <p>Elegante escritorio para oficina o negocio.</p>
+
+  <img src="imagenes/escritorio3.jpg" class="portada" alt="Escritorio Ejecutivo">
+
+  <div class="galeria">
+    <img src="imagenes/escritorio3-1.jpg">
+    <img src="imagenes/escritorio3-2.jpg">
+    <img src="imagenes/escritorio3-3.jpg">
+    <img src="imagenes/escritorio3-4.jpg">
+  </div>
+
+  <a class="btn-whatsapp"
+     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo"
+     target="_blank">
+     Cotizar este mueble
   </a>
 </section>
 
 <footer>
-  <p>© 2025 Daniel Almonacid – Muebles de Melamina</p>
+  © 2025 Daniel Almonacid · Muebles de Melamina
 </footer>
 
 </body>
