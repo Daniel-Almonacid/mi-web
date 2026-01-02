@@ -2,29 +2,34 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Catálogo de Escritorios - Daniel Almonacid</title>
+<title>Catálogo de Escritorios | Daniel Almonacid</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
   background: #111;
-  color: white;
-  padding: 15px;
+  padding: 15px 20px;
 }
 
-.header-top {
+.header-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -33,67 +38,76 @@ header {
 }
 
 .logo img {
-  width: 130px;
+  width: 90px;
+  height: auto;
 }
 
-.logo h1 {
-  font-size: 22px;
-  margin-left: 10px;
+.logo span {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 nav a:hover {
   color: #25D366;
 }
 
-/* CONTENEDOR */
+/* ===== CONTENIDO ===== */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
-/* PRODUCTO */
 .producto {
   background: white;
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* GALERIA */
+.producto h2 {
+  margin-top: 0;
+}
+
+.producto p {
+  font-size: 16px;
+}
+
+/* ===== GALERÍA ===== */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.imagen-principal {
-  flex: 1;
-  min-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .imagen-principal img {
   width: 100%;
+  max-height: 420px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .miniaturas {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .miniaturas img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   cursor: pointer;
   border-radius: 6px;
@@ -104,31 +118,41 @@ nav a:hover {
   border-color: #25D366;
 }
 
-/* BOTON */
+/* ===== BOTÓN ===== */
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
+  margin-top: 20px;
+  padding: 14px 24px;
   background: #25D366;
   color: white;
+  font-size: 16px;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .header-top {
-    flex-direction: column;
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .galeria {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    margin-top: 10px;
     text-align: center;
   }
 
-  nav {
-    margin-top: 10px;
+  nav a {
+    margin: 0 10px;
+    display: inline-block;
   }
 
-  .galeria {
-    flex-direction: column;
+  .logo span {
+    font-size: 20px;
   }
 }
 </style>
@@ -143,10 +167,10 @@ function cambiarImagen(id, src) {
 <body>
 
 <header>
-  <div class="header-top">
+  <div class="header-container">
     <div class="logo">
       <img src="gato.png" alt="Logo">
-      <h1>Daniel Almonacid</h1>
+      <span>Daniel Almonacid</span>
     </div>
 
     <nav>
@@ -167,12 +191,12 @@ function cambiarImagen(id, src) {
 <div class="galeria">
   <div class="imagen-principal">
     <img id="img1" src="imagenes/escritorio1.jpg">
-    <div class="miniaturas">
-      <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1', this.src)">
-      <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1', this.src)">
-      <img src="imagenes/escritorio1-3.jpg" onclick="cambiarImagen('img1', this.src)">
-      <img src="imagenes/escritorio1-4.jpg" onclick="cambiarImagen('img1', this.src)">
-    </div>
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1', this.src)">
+    <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1', this.src)">
+    <img src="imagenes/escritorio1-3.jpg" onclick="cambiarImagen('img1', this.src)">
+    <img src="imagenes/escritorio1-4.jpg" onclick="cambiarImagen('img1', this.src)">
   </div>
 </div>
 
@@ -187,12 +211,12 @@ function cambiarImagen(id, src) {
 <div class="galeria">
   <div class="imagen-principal">
     <img id="img2" src="imagenes/escritorio2.jpg">
-    <div class="miniaturas">
-      <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2', this.src)">
-      <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2', this.src)">
-      <img src="imagenes/escritorio2-3.jpg" onclick="cambiarImagen('img2', this.src)">
-      <img src="imagenes/escritorio2-4.jpg" onclick="cambiarImagen('img2', this.src)">
-    </div>
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2', this.src)">
+    <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2', this.src)">
+    <img src="imagenes/escritorio2-3.jpg" onclick="cambiarImagen('img2', this.src)">
+    <img src="imagenes/escritorio2-4.jpg" onclick="cambiarImagen('img2', this.src)">
   </div>
 </div>
 
@@ -207,12 +231,12 @@ function cambiarImagen(id, src) {
 <div class="galeria">
   <div class="imagen-principal">
     <img id="img3" src="imagenes/escritorio3.jpg">
-    <div class="miniaturas">
-      <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3', this.src)">
-      <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3', this.src)">
-      <img src="imagenes/escritorio3-3.jpg" onclick="cambiarImagen('img3', this.src)">
-      <img src="imagenes/escritorio3-4.jpg" onclick="cambiarImagen('img3', this.src)">
-    </div>
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3', this.src)">
+    <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3', this.src)">
+    <img src="imagenes/escritorio3-3.jpg" onclick="cambiarImagen('img3', this.src)">
+    <img src="imagenes/escritorio3-4.jpg" onclick="cambiarImagen('img3', this.src)">
   </div>
 </div>
 
