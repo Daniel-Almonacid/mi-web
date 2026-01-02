@@ -1,103 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Escritorios - Daniel Almonacid</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de Escritorios - Daniel Almonacid</title>
 
-  <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f4f4f4;
-      margin:0;
-      padding:0;
-    }
+<style>
+body{
+  font-family:Arial, sans-serif;
+  background:#f4f4f4;
+  margin:0;
+}
 
-    header{
-      background:#222;
-      color:white;
-      padding:15px;
-      text-align:center;
-    }
+header{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 
-    nav a{
-      color:white;
-      margin:0 10px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+header img{
+  max-width:180px;
+  border-radius:12px;
+  margin-top:10px;
+}
 
-    .producto{
-      background:white;
-      padding:20px;
-      margin:20px auto;
-      max-width:900px;
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    }
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .producto h2{
-      margin-top:0;
-    }
+.producto{
+  background:white;
+  max-width:900px;
+  margin:30px auto;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
 
-    .portada{
-      width:100%;
-      max-width:500px;
-      display:block;
-      margin:15px auto;
-      border-radius:12px;
-    }
+.portada{
+  width:100%;
+  max-width:500px;
+  display:block;
+  margin:15px auto;
+  border-radius:12px;
+  transition:0.3s;
+}
 
-    .galeria{
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
+.galeria{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:15px;
+}
 
-    .galeria img{
-      width:100px;
-      border-radius:8px;
-      cursor:pointer;
-      transition:transform .2s;
-    }
+.galeria img{
+  width:90px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
 
-    .galeria img:hover{
-      transform:scale(1.1);
-    }
+.galeria img:hover{
+  transform:scale(1.15);
+}
 
-    .btn-whatsapp{
-      display:inline-block;
-      margin-top:15px;
-      padding:12px 25px;
-      background:#25D366;
-      color:white;
-      font-weight:bold;
-      border-radius:30px;
-      text-decoration:none;
-    }
+.btn-whatsapp{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  background:#25D366;
+  color:white;
+  font-weight:bold;
+  border-radius:30px;
+  text-decoration:none;
+}
 
-    footer{
-      background:#222;
-      color:white;
-      text-align:center;
-      padding:15px;
-      margin-top:30px;
-    }
-
-    @media(max-width:600px){
-      .galeria img{
-        width:80px;
-      }
-    }
-  </style>
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Daniel Almonacid</h1>
+  <p>Catálogo de Escritorios en Melamina</p>
+
+  <!-- IMAGEN DEL GATO -->
+  <img src="gato.png" alt="Logo">
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Sobre mí</a>
@@ -105,72 +106,72 @@
   </nav>
 </header>
 
-<!-- ================= ESCRITORIO 1 ================= -->
+<!-- ESCRITORIO 1 -->
 <section class="producto">
-  <h2>Escritorio Moderno</h2>
-  <p>Diseño moderno en melamina, compacto y funcional.</p>
+<h2>Escritorio Moderno</h2>
+<p>Diseño moderno en melamina, compacto y funcional.</p>
 
-  <img src="imagenes/escritorio1.jpg" class="portada" alt="Escritorio Moderno">
+<img id="img1" src="imagenes/escritorio1.jpg" class="portada">
 
-  <div class="galeria">
-    <img src="imagenes/escritorio1-1.jpg">
-    <img src="imagenes/escritorio1-2.jpg">
-    <img src="imagenes/escritorio1-3.jpg">
-    <img src="imagenes/escritorio1-4.jpg">
-  </div>
+<div class="galeria">
+  <img src="imagenes/escritorio1-1.jpg" onclick="cambiar('img1',this.src)">
+  <img src="imagenes/escritorio1-2.jpg" onclick="cambiar('img1',this.src)">
+  <img src="imagenes/escritorio1-3.jpg" onclick="cambiar('img1',this.src)">
+  <img src="imagenes/escritorio1-4.jpg" onclick="cambiar('img1',this.src)">
+</div>
 
-  <a class="btn-whatsapp"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno"
-     target="_blank">
-     Cotizar este mueble
-  </a>
+<a class="btn-whatsapp"
+href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno"
+target="_blank">Cotizar este mueble</a>
 </section>
 
-<!-- ================= ESCRITORIO 2 ================= -->
+<!-- ESCRITORIO 2 -->
 <section class="producto">
-  <h2>Escritorio Gamer</h2>
-  <p>Amplio escritorio gamer, ideal para setup completo.</p>
+<h2>Escritorio Gamer</h2>
+<p>Amplio escritorio gamer, ideal para setup completo.</p>
 
-  <img src="imagenes/escritorio2.jpg" class="portada" alt="Escritorio Gamer">
+<img id="img2" src="imagenes/escritorio2.jpg" class="portada">
 
-  <div class="galeria">
-    <img src="imagenes/escritorio2-1.jpg">
-    <img src="imagenes/escritorio2-2.jpg">
-    <img src="imagenes/escritorio2-3.jpg">
-    <img src="imagenes/escritorio2-4.jpg">
-  </div>
+<div class="galeria">
+  <img src="imagenes/escritorio2-1.jpg" onclick="cambiar('img2',this.src)">
+  <img src="imagenes/escritorio2-2.jpg" onclick="cambiar('img2',this.src)">
+  <img src="imagenes/escritorio2-3.jpg" onclick="cambiar('img2',this.src)">
+  <img src="imagenes/escritorio2-4.jpg" onclick="cambiar('img2',this.src)">
+</div>
 
-  <a class="btn-whatsapp"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer"
-     target="_blank">
-     Cotizar este mueble
-  </a>
+<a class="btn-whatsapp"
+href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer"
+target="_blank">Cotizar este mueble</a>
 </section>
 
-<!-- ================= ESCRITORIO 3 ================= -->
+<!-- ESCRITORIO 3 -->
 <section class="producto">
-  <h2>Escritorio Ejecutivo</h2>
-  <p>Elegante escritorio para oficina o negocio.</p>
+<h2>Escritorio Ejecutivo</h2>
+<p>Elegante escritorio para oficina o negocio.</p>
 
-  <img src="imagenes/escritorio3.jpg" class="portada" alt="Escritorio Ejecutivo">
+<img id="img3" src="imagenes/escritorio3.jpg" class="portada">
 
-  <div class="galeria">
-    <img src="imagenes/escritorio3-1.jpg">
-    <img src="imagenes/escritorio3-2.jpg">
-    <img src="imagenes/escritorio3-3.jpg">
-    <img src="imagenes/escritorio3-4.jpg">
-  </div>
+<div class="galeria">
+  <img src="imagenes/escritorio3-1.jpg" onclick="cambiar('img3',this.src)">
+  <img src="imagenes/escritorio3-2.jpg" onclick="cambiar('img3',this.src)">
+  <img src="imagenes/escritorio3-3.jpg" onclick="cambiar('img3',this.src)">
+  <img src="imagenes/escritorio3-4.jpg" onclick="cambiar('img3',this.src)">
+</div>
 
-  <a class="btn-whatsapp"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo"
-     target="_blank">
-     Cotizar este mueble
-  </a>
+<a class="btn-whatsapp"
+href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo"
+target="_blank">Cotizar este mueble</a>
 </section>
 
 <footer>
-  © 2025 Daniel Almonacid · Muebles de Melamina
+© 2025 Daniel Almonacid · Muebles de Melamina
 </footer>
+
+<script>
+function cambiar(id, src){
+  document.getElementById(id).src = src;
+}
+</script>
 
 </body>
 </html>
