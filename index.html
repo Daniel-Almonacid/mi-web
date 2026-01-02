@@ -36,6 +36,19 @@ nav a{
 /* TITULOS */
 h1{text-align:center;margin:30px 0;}
 
+/* BOTON CATALOGO */
+.boton-catalogo{
+  display:inline-block;
+  background:#0f172a;
+  color:white;
+  padding:12px 26px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+  margin-bottom:30px;
+}
+
 /* CATÁLOGO */
 .catalogo{
   max-width:1200px;
@@ -134,12 +147,6 @@ footer{
   padding:20px;
   margin-top:40px;
 }
-
-/* RESPONSIVE */
-@media(max-width:600px){
-  nav{width:100%;text-align:center;margin-top:10px;}
-  nav a{margin:0 10px;}
-}
 </style>
 
 <script>
@@ -161,6 +168,12 @@ function cambiarImagen(id,src){
 </header>
 
 <h1>Catálogo de Escritorios</h1>
+
+<div style="text-align:center;">
+  <a class="boton-catalogo" href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank">
+    📄 Descargar catálogo
+  </a>
+</div>
 
 <section class="catalogo">
 
