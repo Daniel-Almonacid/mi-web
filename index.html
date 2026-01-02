@@ -6,25 +6,22 @@
 <title>Catálogo de Escritorios | Daniel Almonacid</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
-
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:#f5f5f5;
+  background:#f8fafc;
   color:#1f2937;
 }
 
 /* HEADER */
 header{
-  background:#111;
+  background:#0f172a;
   color:white;
-  padding:18px 35px;
+  padding:15px 25px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   flex-wrap:wrap;
-  box-shadow:0 4px 12px rgba(0,0,0,.3);
 }
 
 header img{height:55px;}
@@ -32,106 +29,80 @@ header img{height:55px;}
 nav a{
   color:white;
   text-decoration:none;
-  margin-left:25px;
-  font-weight:600;
-  font-family:'Montserrat',sans-serif;
+  margin-left:20px;
+  font-weight:bold;
 }
 
 /* TITULOS */
-h1{
-  text-align:center;
-  margin:40px 0 10px;
-  font-family:'Montserrat',sans-serif;
-  font-weight:700;
-  color:#111;
-  letter-spacing:1px;
-}
-
-/* BOTON DESCARGAR */
-.boton-descargar{
-  display:inline-block;
-  background:#111;
-  color:white;
-  padding:14px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:15px;
-  box-shadow:0 4px 12px rgba(0,0,0,.3);
-}
+h1{text-align:center;margin:30px 0;}
 
 /* CATÁLOGO */
 .catalogo{
-  max-width:1250px;
+  max-width:1200px;
   margin:auto;
-  padding:20px 25px;
+  padding:20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:35px;
+  gap:30px;
 }
 
 .producto{
   background:white;
-  border-radius:16px;
-  padding:25px 20px 30px;
+  border-radius:12px;
+  padding:20px;
   text-align:center;
-  box-shadow:0 10px 22px rgba(0,0,0,.12);
-  transition:.3s;
-}
-
-.producto:hover{transform:translateY(-5px);}
-
-.producto h3{
-  font-family:'Montserrat',sans-serif;
-  font-weight:600;
-  color:#4b2e19;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
 
 .imagen-principal{
   width:100%;
   max-width:420px;
-  margin:18px auto;
+  margin:15px auto;
 }
 
 .imagen-principal img{
   width:100%;
-  border-radius:12px;
-  box-shadow:0 6px 14px rgba(0,0,0,.18);
+  height:auto;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
 }
 
 .miniaturas{
   display:flex;
   justify-content:center;
-  gap:12px;
-  margin-top:12px;
+  gap:10px;
+  margin-top:10px;
 }
 
 .miniaturas img{
   width:70px;
   height:70px;
   object-fit:cover;
-  border-radius:10px;
+  border-radius:8px;
   cursor:pointer;
   border:2px solid transparent;
 }
 
-.miniaturas img:hover{border-color:#25D366;}
-
-.boton{
-  display:inline-block;
-  background:#25D366;
-  color:white;
-  padding:13px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:18px;
-  font-size:15px;
+.miniaturas img:hover{
+  border-color:#22c55e;
 }
 
+/* BOTONES */
+.boton{
+  display:inline-block;
+  background:#22c55e;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+/* PRECIOS */
 .precios{
-  max-width:950px;
-  margin:60px auto;
+  max-width:900px;
+  margin:40px auto;
   padding:20px;
 }
 
@@ -139,33 +110,35 @@ table{
   width:100%;
   border-collapse:collapse;
   background:white;
-  box-shadow:0 10px 22px rgba(0,0,0,.12);
-  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  border-radius:10px;
   overflow:hidden;
 }
 
 th,td{
-  padding:15px;
+  padding:14px;
   text-align:center;
   border-bottom:1px solid #e5e7eb;
 }
 
 th{
-  background:#111;
+  background:#0f172a;
   color:white;
-  font-family:'Montserrat',sans-serif;
 }
 
+/* FOOTER */
 footer{
-  background:#111;
+  background:#0f172a;
   color:white;
   text-align:center;
-  padding:22px;
-  margin-top:50px;
+  padding:20px;
+  margin-top:40px;
 }
 
+/* RESPONSIVE */
 @media(max-width:600px){
-  nav{width:100%;text-align:center;margin-top:12px;}
+  nav{width:100%;text-align:center;margin-top:10px;}
+  nav a{margin:0 10px;}
 }
 </style>
 
@@ -175,10 +148,11 @@ function cambiarImagen(id,src){
 }
 </script>
 </head>
+
 <body>
 
 <header>
-  <img src="gato.png">
+  <img src="gato.png" alt="Logo Daniel">
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Nuestra empresa</a>
@@ -188,28 +162,72 @@ function cambiarImagen(id,src){
 
 <h1>Catálogo de Escritorios</h1>
 
-<div style="text-align:center;margin-bottom:30px;">
-  <a class="boton-descargar" href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank">
-    📄 Descargar catálogo
-  </a>
+<section class="catalogo">
+
+<div class="producto">
+  <h3>Escritorio Moderno</h3>
+  <div class="imagen-principal">
+    <img id="img1" src="imagenes/escritorio1.jpg">
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
+    <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1',this.src)">
+    <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1',this.src)">
+    <img src="imagenes/escritorio1-3.jpg" onclick="cambiarImagen('img1',this.src)">
+  </div>
+  <p>Diseño moderno en melamina, compacto y funcional.</p>
+  <a class="boton" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno" target="_blank">Cotizar este mueble</a>
 </div>
 
-<section class="catalogo">
-  <!-- PRODUCTOS (igual que los tuyos, intactos) -->
+<div class="producto">
+  <h3>Escritorio Gamer</h3>
+  <div class="imagen-principal">
+    <img id="img2" src="imagenes/escritorio2.jpg">
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
+    <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2',this.src)">
+    <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2',this.src)">
+    <img src="imagenes/escritorio2-3.jpg" onclick="cambiarImagen('img2',this.src)">
+  </div>
+  <p>Amplio escritorio gamer ideal para setup completo.</p>
+  <a class="boton" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer" target="_blank">Cotizar este mueble</a>
+</div>
+
+<div class="producto">
+  <h3>Escritorio Ejecutivo</h3>
+  <div class="imagen-principal">
+    <img id="img3" src="imagenes/escritorio3.jpg">
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
+    <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3',this.src)">
+    <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3',this.src)">
+    <img src="imagenes/escritorio3-3.jpg" onclick="cambiarImagen('img3',this.src)">
+  </div>
+  <p>Elegante escritorio para oficina o negocio.</p>
+  <a class="boton" href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo" target="_blank">Cotizar este mueble</a>
+</div>
+
 </section>
 
 <section class="precios">
-  <!-- TABLA DE PRECIOS (ya incluida en tu archivo) -->
+<h2 style="text-align:center;">Precios Referenciales</h2>
+<table>
+<tr><th>Modelo</th><th>Material</th><th>Precio desde</th></tr>
+<tr><td>Escritorio Moderno</td><td>Melamina 18mm</td><td>S/ 450</td></tr>
+<tr><td>Escritorio Gamer</td><td>Melamina reforzada</td><td>S/ 750</td></tr>
+<tr><td>Escritorio Ejecutivo</td><td>Melamina premium</td><td>S/ 980</td></tr>
+</table>
 </section>
 
 <footer>
-  © 2025 Daniel Almonacid — Muebles en Melamina
+© 2025 Daniel Almonacid — Muebles en Melamina
 </footer>
 
-<a href="https://wa.me/51914926262?text=Hola%20Daniel,%20quiero%20información%20sobre%20sus%20escritorios%20en%20melamina."
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:16px 22px;border-radius:50px;font-size:16px;font-weight:bold;text-decoration:none;">
-  📲 Cotiza aquí
+<a href="https://wa.me/51914926262" target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;font-weight:bold;text-decoration:none;">
+📲 WhatsApp
 </a>
 
 </body>
