@@ -12,84 +12,86 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
   color: #333;
 }
 
 /* ===== HEADER ===== */
 header {
   background: #111;
-  padding: 15px 20px;
+  padding: 20px 0;
 }
 
 .header-container {
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+/* LOGO */
 .logo {
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  width: 90px;
-  height: auto;
+  width: 140px; /* MÁS GRANDE */
 }
 
-.logo span {
+.logo h1 {
   color: white;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 28px;
   margin-left: 15px;
 }
 
-/* ===== NAV ===== */
+/* MENU */
+nav {
+  display: flex;
+  gap: 30px;
+}
+
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 nav a:hover {
   color: #25D366;
 }
 
-/* ===== CONTENIDO ===== */
+/* CONTENIDO */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 30px 20px;
 }
 
+/* PRODUCTO */
 .producto {
   background: white;
-  margin-bottom: 40px;
   padding: 25px;
+  margin-bottom: 40px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
 }
 
 .producto h2 {
   margin-top: 0;
 }
 
-.producto p {
-  font-size: 16px;
-}
-
-/* ===== GALERÍA ===== */
+/* GALERIA */
 .galeria {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 15px;
 }
 
 .imagen-principal img {
@@ -101,16 +103,16 @@ nav a:hover {
 
 .miniaturas {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .miniaturas img {
-  width: 80px;
+  width: 100%;
   height: 80px;
   object-fit: cover;
-  cursor: pointer;
   border-radius: 6px;
+  cursor: pointer;
   border: 2px solid transparent;
 }
 
@@ -118,41 +120,43 @@ nav a:hover {
   border-color: #25D366;
 }
 
-/* ===== BOTÓN ===== */
+/* BOTON */
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 14px 24px;
   background: #25D366;
   color: white;
-  font-size: 16px;
+  padding: 14px 24px;
   text-decoration: none;
+  font-size: 18px;
   border-radius: 8px;
   font-weight: bold;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (min-width: 768px) {
-  .galeria {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-  }
-}
-
-@media (max-width: 600px) {
-  nav {
-    width: 100%;
-    margin-top: 10px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
     text-align: center;
   }
 
-  nav a {
-    margin: 0 10px;
-    display: inline-block;
+  nav {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .logo span {
-    font-size: 20px;
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .miniaturas {
+    flex-direction: row;
+  }
+
+  .miniaturas img {
+    width: 80px;
+    height: 80px;
   }
 }
 </style>
@@ -170,12 +174,13 @@ function cambiarImagen(id, src) {
   <div class="header-container">
     <div class="logo">
       <img src="gato.png" alt="Logo">
-      <span>Daniel Almonacid</span>
+      <h1>Daniel Almonacid</h1>
     </div>
 
     <nav>
       <a href="index.html">Inicio</a>
       <a href="#catalogo">Catálogo</a>
+      <a href="sobre.html">Nuestra empresa</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </div>
