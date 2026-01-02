@@ -13,7 +13,7 @@ body{
   color:#333;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   background:#0f172a;
   color:#fff;
@@ -23,29 +23,24 @@ header{
   align-items:center;
   flex-wrap:wrap;
 }
-header img{
-  height:60px;
-}
+header img{height:60px}
 nav a{
   color:#fff;
   text-decoration:none;
   margin-left:20px;
   font-weight:bold;
 }
-nav a:hover{ text-decoration:underline; }
+nav a:hover{text-decoration:underline}
 
-/* ===== CONTENEDOR ===== */
+/* CONTENEDOR */
 .container{
   max-width:1200px;
   margin:auto;
   padding:25px;
 }
-h1{
-  text-align:center;
-  margin-bottom:40px;
-}
+h1{text-align:center;margin-bottom:40px}
 
-/* ===== TARJETAS ===== */
+/* TARJETAS */
 .card{
   background:#fff;
   border-radius:16px;
@@ -53,9 +48,8 @@ h1{
   margin-bottom:40px;
   box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
-.card h2{margin-top:0}
 
-/* ===== IMAGEN PRINCIPAL ===== */
+/* IMAGEN PRINCIPAL */
 .imagen-principal{
   height:65vh;
   display:flex;
@@ -69,7 +63,7 @@ h1{
   border-radius:12px;
 }
 
-/* ===== MINIATURAS ===== */
+/* MINIATURAS */
 .miniaturas{
   display:flex;
   justify-content:center;
@@ -85,11 +79,9 @@ h1{
   cursor:pointer;
   border:2px solid transparent;
 }
-.miniaturas img:hover{
-  border-color:#2563eb;
-}
+.miniaturas img:hover{border-color:#2563eb}
 
-/* ===== BOTÓN ===== */
+/* BOTONES */
 .btn{
   display:inline-block;
   margin-top:20px;
@@ -102,7 +94,16 @@ h1{
 }
 .btn:hover{background:#15803d}
 
-/* ===== FOOTER ===== */
+/* TABLA */
+table{
+  width:100%;
+  border-collapse:collapse;
+  text-align:center;
+}
+th,td{padding:12px}
+thead{background:#0f172a;color:#fff}
+
+/* FOOTER */
 footer{
   background:#0f172a;
   color:#fff;
@@ -110,7 +111,7 @@ footer{
   padding:25px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:768px){
   .imagen-principal{height:55vh}
   header{flex-direction:column;gap:10px}
@@ -136,18 +137,15 @@ footer{
 <div class="card">
 <h2>Escritorio Moderno</h2>
 <p>Diseño moderno en melamina, compacto y funcional.</p>
-
 <div class="imagen-principal">
   <img id="e1" src="imagenes/escritorio1.jpg">
 </div>
-
 <div class="miniaturas">
   <img src="imagenes/escritorio1-1.jpg" onclick="e1.src=this.src">
   <img src="imagenes/escritorio1-2.jpg" onclick="e1.src=this.src">
   <img src="imagenes/escritorio1-3.jpg" onclick="e1.src=this.src">
   <img src="imagenes/escritorio1-4.jpg" onclick="e1.src=this.src">
 </div>
-
 <a class="btn" href="https://wa.me/51914926262" target="_blank">Cotizar este mueble</a>
 </div>
 
@@ -155,18 +153,15 @@ footer{
 <div class="card">
 <h2>Escritorio Gamer</h2>
 <p>Amplio escritorio gamer ideal para setup completo.</p>
-
 <div class="imagen-principal">
   <img id="e2" src="imagenes/escritorio2.jpg">
 </div>
-
 <div class="miniaturas">
   <img src="imagenes/escritorio2-1.jpg" onclick="e2.src=this.src">
   <img src="imagenes/escritorio2-2.jpg" onclick="e2.src=this.src">
   <img src="imagenes/escritorio2-3.jpg" onclick="e2.src=this.src">
   <img src="imagenes/escritorio2-4.jpg" onclick="e2.src=this.src">
 </div>
-
 <a class="btn" href="https://wa.me/51914926262" target="_blank">Cotizar este mueble</a>
 </div>
 
@@ -174,19 +169,51 @@ footer{
 <div class="card">
 <h2>Escritorio Ejecutivo</h2>
 <p>Elegante escritorio para oficina o negocio.</p>
-
 <div class="imagen-principal">
   <img id="e3" src="imagenes/escritorio3.jpg">
 </div>
-
 <div class="miniaturas">
   <img src="imagenes/escritorio3-1.jpg" onclick="e3.src=this.src">
   <img src="imagenes/escritorio3-2.jpg" onclick="e3.src=this.src">
   <img src="imagenes/escritorio3-3.jpg" onclick="e3.src=this.src">
   <img src="imagenes/escritorio3-4.jpg" onclick="e3.src=this.src">
 </div>
-
 <a class="btn" href="https://wa.me/51914926262" target="_blank">Cotizar este mueble</a>
+</div>
+
+<!-- TABLA DE PRECIOS -->
+<div class="card">
+<h2>Precios Referenciales</h2>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Material</th>
+<th>Precio desde</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escritorio Moderno</td>
+<td>Melamina 18mm</td>
+<td>S/ 450</td>
+<td><a class="btn" href="https://wa.me/51914926262">Cotizar</a></td>
+</tr>
+<tr style="background:#f1f5f9">
+<td>Escritorio Gamer</td>
+<td>Melamina reforzada</td>
+<td>S/ 750</td>
+<td><a class="btn" href="https://wa.me/51914926262">Cotizar</a></td>
+</tr>
+<tr>
+<td>Escritorio Ejecutivo</td>
+<td>Melamina premium</td>
+<td>S/ 980</td>
+<td><a class="btn" href="https://wa.me/51914926262">Cotizar</a></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 </div>
