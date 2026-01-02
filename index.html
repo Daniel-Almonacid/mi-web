@@ -1,263 +1,222 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Catálogo de Escritorios | Daniel Almonacid</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Catálogo de Escritorios | Daniel Almonacid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* { box-sizing: border-box; }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  color: #333;
-}
+    /* ===== HEADER ===== */
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-/* ===== HEADER ===== */
-header {
-  background: #111;
-  padding: 20px 0;
-}
+    header img {
+      height: 55px;
+    }
 
-.header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.logo img {
-  width: 140px;
-}
+    /* ===== CONTENEDOR ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
 
-.logo h1 {
-  color: white;
-  font-size: 28px;
-  margin-left: 15px;
-}
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-/* MENU */
-nav {
-  display: flex;
-  gap: 25px;
-}
+    /* ===== TARJETAS ===== */
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-}
+    .card h2 {
+      margin-top: 0;
+    }
 
-nav a:hover {
-  color: #25D366;
-}
+    /* ===== IMAGEN PRINCIPAL ===== */
+    .imagen-principal {
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
 
-/* ===== CONTENIDO ===== */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 30px 20px;
-}
+    .imagen-principal img {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+      border-radius: 12px;
+    }
 
-/* PRODUCTO */
-.producto {
-  background: white;
-  padding: 25px;
-  margin-bottom: 40px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
+    /* ===== MINIATURAS ===== */
+    .miniaturas {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.producto h2 {
-  margin-top: 0;
-}
+    .miniaturas img {
+      width: 90px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
 
-/* ===== GALERIA ===== */
-.galeria {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
+    .miniaturas img:hover {
+      border-color: #2563eb;
+    }
 
-.imagen-principal {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    /* ===== BOTÓN ===== */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #16a34a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-.imagen-principal img {
-  max-width: 100%;
-  max-height: 70vh;      /* 🔥 CLAVE: entra en la pantalla */
-  height: auto;
-  object-fit: contain;   /* 🔥 nunca se corta */
-  border-radius: 12px;
-  transition: opacity 0.25s ease;
-}
+    .btn:hover {
+      background: #15803d;
+    }
 
-/* MINIATURAS */
-.miniaturas {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
 
-.miniaturas img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 8px;
-  border: 3px solid transparent;
-}
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .imagen-principal,
+      .imagen-principal img {
+        height: 55vh;
+        max-height: 55vh;
+      }
 
-.miniaturas img:hover {
-  border-color: #25D366;
-}
-
-/* BOTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #25D366;
-  color: white;
-  padding: 14px 26px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .imagen-principal img {
-    max-height: 60vh; /* un poco menos en celular */
-  }
-
-  .miniaturas img {
-    width: 70px;
-    height: 70px;
-  }
-}
-</style>
-
-<script>
-function cambiarImagen(id, src) {
-  const img = document.getElementById(id);
-  img.style.opacity = 0;
-  setTimeout(() => {
-    img.src = src;
-    img.style.opacity = 1;
-  }, 120);
-}
-</script>
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="header-container">
-    <div class="logo">
-      <img src="gato.png" alt="Logo">
-      <h1>Daniel Almonacid</h1>
-    </div>
-
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="sobre.html">Nuestra empresa</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </div>
+  <img src="gato.png" alt="Logo Daniel">
+  <nav>
+    <a href="índice.html">Inicio</a>
+    <a href="sobre.html">Nuestra empresa</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 </header>
 
-<div class="container" id="catalogo">
+<div class="container">
+  <h1>Catálogo de Escritorios</h1>
 
-<!-- ESCRITORIO 1 -->
-<div class="producto">
-<h2>Escritorio Moderno</h2>
-<p>Diseño moderno en melamina, compacto y funcional.</p>
+  <!-- ===== ESCRITORIO 1 ===== -->
+  <div class="card">
+    <h2>Escritorio Moderno</h2>
+    <p>Diseño moderno en melamina, compacto y funcional.</p>
 
-<div class="galeria">
-  <div class="imagen-principal">
-    <img id="img1" src="imagenes/escritorio1.jpg">
+    <div class="imagen-principal">
+      <img id="img1" src="imagenes/escritorio1.jpg">
+    </div>
+
+    <div class="miniaturas">
+      <img src="imagenes/escritorio1-1.jpg" onclick="img1.src=this.src">
+      <img src="imagenes/escritorio1-2.jpg" onclick="img1.src=this.src">
+      <img src="imagenes/escritorio1-3.jpg" onclick="img1.src=this.src">
+      <img src="imagenes/escritorio1-4.jpg" onclick="img1.src=this.src">
+    </div>
+
+    <a class="btn" href="https://wa.me/51914926262" target="_blank">Cotizar este mueble</a>
   </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1', this.src)">
-    <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1', this.src)">
-    <img src="imagenes/escritorio1-3.jpg" onclick="cambiarImagen('img1', this.src)">
-    <img src="imagenes/escritorio1-4.jpg" onclick="cambiarImagen('img1', this.src)">
+
+  <!-- ===== ESCRITORIO 2 ===== -->
+  <div class="card">
+    <h2>Escritorio Gamer</h2>
+    <p>Amplio escritorio gamer ideal para setup completo.</p>
+
+    <div class="imagen-principal">
+      <img id="img2" src="imagenes/escritorio2.jpg">
+    </div>
+
+    <div class="miniaturas">
+      <img src="imagenes/escritorio2-1.jpg" onclick="img2.src=this.src">
+      <img src="imagenes/escritorio2-2.jpg" onclick="img2.src=this.src">
+      <img src="imagenes/escritorio2-3.jpg" onclick="img2.src=this.src">
+      <img src="imagenes/escritorio2-4.jpg" onclick="img2.src=this.src">
+    </div>
+
+    <a class="btn" href="https://wa.me/51914926262" target="_blank">Cotizar este mueble</a>
   </div>
-</div>
 
-<a class="btn" href="https://wa.me/51914926262">Cotizar este mueble</a>
-</div>
+  <!-- ===== ESCRITORIO 3 ===== -->
+  <div class="card">
+    <h2>Escritorio Ejecutivo</h2>
+    <p>Elegante escritorio ideal para oficina o negocio.</p>
 
-<!-- ESCRITORIO 2 -->
-<div class="producto">
-<h2>Escritorio Gamer</h2>
-<p>Amplio escritorio gamer, ideal para setup completo.</p>
+    <div class="imagen-principal">
+      <img id="img3" src="imagenes/escritorio3.jpg">
+    </div>
 
-<div class="galeria">
-  <div class="imagen-principal">
-    <img id="img2" src="imagenes/escritorio2.jpg">
+    <div class="miniaturas">
+      <img src="imagenes/escritorio3-1.jpg" onclick="img3.src=this.src">
+      <img src="imagenes/escritorio3-2.jpg" onclick="img3.src=this.src">
+      <img src="imagenes/escritorio3-3.jpg" onclick="img3.src=this.src">
+      <img src="imagenes/escritorio3-4.jpg" onclick="img3.src=this.src">
+    </div>
+
+    <a class="btn" href="https://wa.me/51914926262" target="_blank">Cotizar este mueble</a>
   </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2', this.src)">
-    <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2', this.src)">
-    <img src="imagenes/escritorio2-3.jpg" onclick="cambiarImagen('img2', this.src)">
-    <img src="imagenes/escritorio2-4.jpg" onclick="cambiarImagen('img2', this.src)">
-  </div>
-</div>
-
-<a class="btn" href="https://wa.me/51914926262">Cotizar este mueble</a>
-</div>
-
-<!-- ESCRITORIO 3 -->
-<div class="producto">
-<h2>Escritorio Ejecutivo</h2>
-<p>Elegante escritorio para oficina o negocio.</p>
-
-<div class="galeria">
-  <div class="imagen-principal">
-    <img id="img3" src="imagenes/escritorio3.jpg">
-  </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3', this.src)">
-    <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3', this.src)">
-    <img src="imagenes/escritorio3-3.jpg" onclick="cambiarImagen('img3', this.src)">
-    <img src="imagenes/escritorio3-4.jpg" onclick="cambiarImagen('img3', this.src)">
-  </div>
-</div>
-
-<a class="btn" href="https://wa.me/51914926262">Cotizar este mueble</a>
-</div>
 
 </div>
+
+<footer>
+  © 2025 Daniel Almonacid · Muebles de Melamina
+</footer>
 
 </body>
 </html>
