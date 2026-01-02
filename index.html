@@ -13,7 +13,7 @@ body{
   color:#1f2937;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   background:#0f172a;
   color:white;
@@ -24,9 +24,7 @@ header{
   flex-wrap:wrap;
 }
 
-header img{
-  height:55px;
-}
+header img{height:55px;}
 
 nav a{
   color:white;
@@ -35,13 +33,10 @@ nav a{
   font-weight:bold;
 }
 
-/* ===== TITULOS ===== */
-h1{
-  text-align:center;
-  margin:30px 0;
-}
+/* TITULOS */
+h1{text-align:center;margin:30px 0;}
 
-/* ===== CATÁLOGO ===== */
+/* CATÁLOGO */
 .catalogo{
   max-width:1200px;
   margin:auto;
@@ -92,7 +87,7 @@ h1{
   border-color:#22c55e;
 }
 
-/* ===== BOTONES ===== */
+/* BOTONES */
 .boton{
   display:inline-block;
   background:#22c55e;
@@ -104,7 +99,7 @@ h1{
   margin-top:15px;
 }
 
-/* ===== TABLA PRECIOS ===== */
+/* PRECIOS */
 .precios{
   max-width:900px;
   margin:40px auto;
@@ -131,7 +126,7 @@ th{
   color:white;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   background:#0f172a;
   color:white;
@@ -140,16 +135,10 @@ footer{
   margin-top:40px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:600px){
-  nav{
-    width:100%;
-    text-align:center;
-    margin-top:10px;
-  }
-  nav a{
-    margin:0 10px;
-  }
+  nav{width:100%;text-align:center;margin-top:10px;}
+  nav a{margin:0 10px;}
 }
 </style>
 
@@ -162,7 +151,6 @@ function cambiarImagen(id,src){
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
   <img src="gato.png" alt="Logo Daniel">
   <nav>
@@ -174,7 +162,6 @@ function cambiarImagen(id,src){
 
 <h1>Catálogo de Escritorios</h1>
 
-<!-- ===== CATÁLOGO ===== -->
 <section class="catalogo">
 
 <!-- ESCRITORIO 1 -->
@@ -245,7 +232,6 @@ function cambiarImagen(id,src){
 
 </section>
 
-<!-- ===== PRECIOS ===== -->
 <section class="precios">
   <h2 style="text-align:center;">Precios Referenciales</h2>
 
@@ -280,6 +266,26 @@ function cambiarImagen(id,src){
 <footer>
   © 2025 Daniel Almonacid — Muebles en Melamina
 </footer>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+<a href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios"
+   target="_blank"
+   style="
+     position:fixed;
+     bottom:20px;
+     right:20px;
+     background:#25D366;
+     color:white;
+     padding:14px 18px;
+     border-radius:50px;
+     font-size:16px;
+     font-weight:bold;
+     text-decoration:none;
+     box-shadow:0 4px 10px rgba(0,0,0,0.3);
+     z-index:999;
+   ">
+  📲 WhatsApp
+</a>
 
 </body>
 </html>
