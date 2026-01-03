@@ -2,122 +2,110 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Escritorios Profesionales | Daniel Almonacid</title>
+<title>Catálogo de Escritorios</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Poppins',Arial,sans-serif;
-  background:#f4f6f9;
-  color:#1f2937;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f2f2f2;
+  color:#222;
 }
 
 header{
-  background:#0b132b;
-  color:white;
-  padding:25px;
+  background:#111827;
+  color:#fff;
+  padding:20px;
   text-align:center;
 }
 
-header h1{
-  font-size:32px;
-  font-weight:700;
+nav{
+  margin-top:10px;
 }
 
-header p{
-  opacity:.9;
+nav a{
+  color:#fff;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 section{
-  padding:40px 20px;
   max-width:1200px;
   margin:auto;
+  padding:30px 15px;
 }
 
 h2{
   text-align:center;
-  font-size:28px;
-  margin-bottom:30px;
-  color:#0b132b;
+  margin:40px 0 25px;
 }
 
-.catalogo-btn{
+.catalogo-pdf{
   text-align:center;
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
-.catalogo-btn a{
-  background:#ef4444;
-  color:white;
-  padding:14px 24px;
-  border-radius:10px;
+.catalogo-pdf a{
+  background:#dc2626;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:6px;
   text-decoration:none;
-  font-weight:600;
-  box-shadow:0 6px 14px rgba(239,68,68,.35);
+  font-weight:bold;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+  gap:20px;
 }
 
-.producto{
-  background:white;
-  border-radius:18px;
-  padding:20px;
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:15px;
   text-align:center;
-  box-shadow:0 10px 28px rgba(0,0,0,.12);
-  transition:transform .25s ease;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
 
-.producto:hover{
-  transform:translateY(-4px);
-}
-
-.producto img{
+.card img{
   width:100%;
-  border-radius:14px;
+  border-radius:8px;
   transition:transform .3s ease;
 }
 
-.producto img:hover{
-  transform:scale(1.08);
+.card img:hover{
+  transform:scale(1.05);
 }
 
-.producto h3{
-  margin:15px 0 8px;
-  font-size:18px;
-  font-weight:600;
+.card h3{
+  margin:12px 0 6px;
 }
 
 .precio{
-  font-size:20px;
-  font-weight:700;
-  color:#16a34a;
+  font-weight:bold;
+  color:#15803d;
   margin-bottom:10px;
 }
 
 .boton{
   display:inline-block;
-  background:linear-gradient(135deg,#22c55e,#16a34a);
-  color:white;
-  padding:12px 20px;
-  border-radius:10px;
+  background:#16a34a;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
   text-decoration:none;
-  font-weight:600;
-  box-shadow:0 6px 14px rgba(34,197,94,.35);
+  font-weight:bold;
 }
 
 footer{
-  background:#0b132b;
-  color:white;
+  background:#111827;
+  color:#fff;
   text-align:center;
-  padding:20px;
+  padding:15px;
   margin-top:40px;
   font-size:14px;
 }
@@ -127,116 +115,122 @@ footer{
 <body>
 
 <header>
-  <h1>Escritorios Profesionales</h1>
-  <p>Diseño • Calidad • Venta directa por WhatsApp</p>
+  <h1>Catálogo de Escritorios</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre.html">Nuestra empresa</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 </header>
 
 <section>
-  <div class="catalogo-btn">
+
+  <div class="catalogo-pdf">
     <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank">
-      📄 Descargar Catálogo PDF
+      Descargar catálogo PDF
     </a>
   </div>
 
-  <!-- ESCRITORIOS MODERNOS -->
+  <!-- MODERNOS -->
   <h2>Escritorios Modernos</h2>
   <div class="grid">
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/escritorio1.jpg">
       <h3>Moderno 1</h3>
       <div class="precio">S/ 650</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/escritorio2.jpg">
       <h3>Moderno 2</h3>
       <div class="precio">S/ 680</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/escritorio3.jpg">
       <h3>Moderno 3</h3>
       <div class="precio">S/ 720</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/escritorio4.jpg">
       <h3>Moderno 4</h3>
       <div class="precio">S/ 750</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
   </div>
 
   <!-- GAMER -->
-  <h2 style="margin-top:60px;">Escritorios Gamer</h2>
+  <h2>Escritorios Gamer</h2>
   <div class="grid">
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/gamer1.jpg">
       <h3>Gamer 1</h3>
       <div class="precio">S/ 850</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/gamer2.jpg">
       <h3>Gamer 2</h3>
       <div class="precio">S/ 880</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/gamer3.jpg">
       <h3>Gamer 3</h3>
       <div class="precio">S/ 920</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/gamer4.jpg">
       <h3>Gamer 4</h3>
       <div class="precio">S/ 950</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
   </div>
 
   <!-- EJECUTIVOS -->
-  <h2 style="margin-top:60px;">Escritorios Ejecutivos</h2>
+  <h2>Escritorios Ejecutivos</h2>
   <div class="grid">
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/ejecutivo1.jpg">
       <h3>Ejecutivo 1</h3>
       <div class="precio">S/ 980</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/ejecutivo2.jpg">
       <h3>Ejecutivo 2</h3>
       <div class="precio">S/ 1,050</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/ejecutivo3.jpg">
       <h3>Ejecutivo 3</h3>
       <div class="precio">S/ 1,120</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
 
-    <div class="producto">
+    <div class="card">
       <img src="imagenes/ejecutivo4.jpg">
       <h3>Ejecutivo 4</h3>
       <div class="precio">S/ 1,200</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
     </div>
   </div>
+
 </section>
 
 <footer>
-  © 2025 Daniel Almonacid — Escritorios Profesionales
+  © 2025 Daniel Almonacid
 </footer>
 
 </body>
