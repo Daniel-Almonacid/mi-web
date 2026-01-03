@@ -29,12 +29,13 @@ nav a{
   font-weight:bold;
 }
 h1{text-align:center;margin:30px 0;}
+
 .catalogo{
   max-width:1200px;
   margin:auto;
   padding:20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:30px;
 }
 .producto{
@@ -51,8 +52,10 @@ h1{text-align:center;margin:30px 0;}
 }
 .imagen-principal img{
   width:100%;
+  height:280px;
+  object-fit:contain;
   border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  background:#fff;
 }
 .miniaturas{
   display:flex;
@@ -61,14 +64,15 @@ h1{text-align:center;margin:30px 0;}
   margin-top:10px;
 }
 .miniaturas img{
-  width:70px;
-  height:70px;
+  width:65px;
+  height:65px;
   object-fit:cover;
   border-radius:8px;
   cursor:pointer;
   border:2px solid transparent;
 }
 .miniaturas img:hover{border-color:#22c55e;}
+
 .boton{
   display:inline-block;
   background:#22c55e;
@@ -79,6 +83,7 @@ h1{text-align:center;margin:30px 0;}
   font-weight:bold;
   margin-top:15px;
 }
+
 .precios{
   max-width:900px;
   margin:40px auto;
@@ -101,6 +106,7 @@ th{
   background:#0f172a;
   color:white;
 }
+
 footer{
   background:#0f172a;
   color:white;
@@ -108,6 +114,7 @@ footer{
   padding:20px;
   margin-top:40px;
 }
+
 @media(max-width:600px){
   nav{width:100%;text-align:center;margin-top:10px;}
   nav a{margin:0 10px;}
@@ -136,13 +143,14 @@ function cambiarImagen(id,src){
 
 <div style="text-align:center;margin-bottom:30px;">
   <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank"
-     style="background:#111;color:white;padding:14px 26px;border-radius:10px;font-weight:bold;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.25);">
+     style="background:#111;color:white;padding:14px 26px;border-radius:10px;font-weight:bold;text-decoration:none;">
      📄 Descargar Catálogo en PDF
   </a>
 </div>
 
 <section class="catalogo">
 
+<!-- ESCRITORIO MODERNO -->
 <div class="producto">
   <h3>Escritorio Moderno</h3>
   <div class="imagen-principal">
@@ -152,6 +160,7 @@ function cambiarImagen(id,src){
     <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
     <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1',this.src)">
     <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1',this.src)">
+    <img src="imagenes/escritorio1-3.jpg" onclick="cambiarImagen('img1',this.src)">
   </div>
   <p>Diseño moderno en melamina, compacto y funcional.</p>
   <a class="boton" target="_blank"
@@ -160,6 +169,7 @@ function cambiarImagen(id,src){
   </a>
 </div>
 
+<!-- ESCRITORIO GAMER -->
 <div class="producto">
   <h3>Escritorio Gamer</h3>
   <div class="imagen-principal">
@@ -169,6 +179,7 @@ function cambiarImagen(id,src){
     <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
     <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2',this.src)">
     <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2',this.src)">
+    <img src="imagenes/escritorio2-3.jpg" onclick="cambiarImagen('img2',this.src)">
   </div>
   <p>Amplio escritorio gamer ideal para setup completo.</p>
   <a class="boton" target="_blank"
@@ -177,6 +188,7 @@ function cambiarImagen(id,src){
   </a>
 </div>
 
+<!-- ESCRITORIO EJECUTIVO -->
 <div class="producto">
   <h3>Escritorio Ejecutivo</h3>
   <div class="imagen-principal">
@@ -186,6 +198,7 @@ function cambiarImagen(id,src){
     <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
     <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3',this.src)">
     <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3',this.src)">
+    <img src="imagenes/escritorio3-3.jpg" onclick="cambiarImagen('img3',this.src)">
   </div>
   <p>Elegante escritorio para oficina o negocio.</p>
   <a class="boton" target="_blank"
@@ -208,11 +221,10 @@ function cambiarImagen(id,src){
 
 <footer>© 2025 Daniel Almonacid — Muebles en Melamina</footer>
 
-<a href="https://wa.me/51914926262"
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:999;">
-  📲 WhatsApp
-</a>
+<a href="https://wa.me/51914926262" target="_blank"
+   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
+   padding:14px 18px;border-radius:50px;font-weight:bold;text-decoration:none;">
+📲 WhatsApp</a>
 
 </body>
 </html>
