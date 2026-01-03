@@ -2,245 +2,242 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<title>Escritorios Profesionales | Daniel Almonacid</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo de Escritorios | Daniel Almonacid</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f8fafc;
+  font-family:'Poppins',Arial,sans-serif;
+  background:#f4f6f9;
   color:#1f2937;
 }
 
-/* HEADER */
 header{
-  background:#0f172a;
+  background:#0b132b;
   color:white;
-  padding:15px 25px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-header img{height:55px;}
-nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-  font-weight:bold;
+  padding:25px;
+  text-align:center;
 }
 
-/* TITULOS */
-h1{text-align:center;margin:30px 0;}
+header h1{
+  font-size:32px;
+  font-weight:700;
+}
 
-/* CATÁLOGO */
-.catalogo{
+header p{
+  opacity:.9;
+}
+
+section{
+  padding:40px 20px;
   max-width:1200px;
   margin:auto;
-  padding:20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
 }
+
+h2{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:30px;
+  color:#0b132b;
+}
+
+.catalogo-btn{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.catalogo-btn a{
+  background:#ef4444;
+  color:white;
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 14px rgba(239,68,68,.35);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
 .producto{
   background:white;
-  border-radius:14px;
+  border-radius:18px;
   padding:20px;
   text-align:center;
-  box-shadow:0 6px 18px rgba(0,0,0,.1);
-}
-
-/* IMAGEN PRINCIPAL + ZOOM */
-.imagen-principal img{
-  width:100%;
-  height:260px;
-  object-fit:contain;
-  border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,.15);
-  cursor:zoom-in;
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
   transition:transform .25s ease;
 }
-.imagen-principal img.zoom{
-  transform:scale(1.5);
-  cursor:zoom-out;
+
+.producto:hover{
+  transform:translateY(-4px);
 }
 
-/* MINIATURAS */
-.miniaturas{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:12px;
+.producto img{
+  width:100%;
+  border-radius:14px;
+  transition:transform .3s ease;
 }
-.miniaturas img{
-  width:65px;
-  height:65px;
-  object-fit:cover;
-  border-radius:8px;
-  cursor:pointer;
-  border:2px solid transparent;
-}
-.miniaturas img:hover{border-color:#22c55e;}
 
-/* BOTONES */
+.producto img:hover{
+  transform:scale(1.08);
+}
+
+.producto h3{
+  margin:15px 0 8px;
+  font-size:18px;
+  font-weight:600;
+}
+
+.precio{
+  font-size:20px;
+  font-weight:700;
+  color:#16a34a;
+  margin-bottom:10px;
+}
+
 .boton{
   display:inline-block;
-  background:#22c55e;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
   color:white;
   padding:12px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;
-}
-
-/* PRECIOS */
-.precios{
-  max-width:900px;
-  margin:40px auto;
-  padding:20px;
-}
-table{
-  width:100%;
-  border-collapse:collapse;
-  background:white;
-  box-shadow:0 6px 18px rgba(0,0,0,.1);
   border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 14px rgba(34,197,94,.35);
 }
-th,td{
-  padding:14px;
-  text-align:center;
-  border-bottom:1px solid #e5e7eb;
-}
-th{background:#0f172a;color:white;}
 
-/* FOOTER */
 footer{
-  background:#0f172a;
+  background:#0b132b;
   color:white;
   text-align:center;
   padding:20px;
   margin-top:40px;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-  nav{width:100%;text-align:center;margin-top:10px;}
-  nav a{margin:0 10px;}
-  .imagen-principal img{height:220px;}
+  font-size:14px;
 }
 </style>
-
-<script>
-function cambiarImagen(id,src){
-  document.getElementById(id).src = src;
-}
-
-function toggleZoom(img){
-  img.classList.toggle("zoom");
-}
-</script>
 </head>
 
 <body>
 
 <header>
-  <img src="gato.png">
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="sobre.html">Nuestra empresa</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
+  <h1>Escritorios Profesionales</h1>
+  <p>Diseño • Calidad • Venta directa por WhatsApp</p>
 </header>
 
-<h1>Catálogo de Escritorios</h1>
-
-<div style="text-align:center;margin-bottom:30px;">
-  <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank"
-     style="background:#111;color:white;padding:14px 26px;border-radius:10px;
-     font-weight:bold;text-decoration:none;">
-     📄 Descargar Catálogo en PDF
-  </a>
-</div>
-
-<section class="catalogo">
-
-<!-- ESCRITORIO MODERNO -->
-<div class="producto">
-  <h3>Escritorio Moderno</h3>
-  <div class="imagen-principal">
-    <img id="img1" src="imagenes/escritorio1.jpg" onclick="toggleZoom(this)">
+<section>
+  <div class="catalogo-btn">
+    <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank">
+      📄 Descargar Catálogo PDF
+    </a>
   </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
-    <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1',this.src)">
-    <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1',this.src)">
-    <img src="imagenes/escritorio1-3.jpg" onclick="cambiarImagen('img1',this.src)">
-  </div>
-  <p>Diseño moderno en melamina, compacto y funcional.</p>
-  <a class="boton" target="_blank"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno">
-     Cotizar este mueble
-  </a>
-</div>
 
-<!-- ESCRITORIO GAMER -->
-<div class="producto">
-  <h3>Escritorio Gamer</h3>
-  <div class="imagen-principal">
-    <img id="img2" src="imagenes/escritorio2.jpg" onclick="toggleZoom(this)">
-  </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
-    <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2',this.src)">
-    <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2',this.src)">
-    <img src="imagenes/escritorio2-3.jpg" onclick="cambiarImagen('img2',this.src)">
-  </div>
-  <p>Amplio escritorio gamer ideal para setup completo.</p>
-  <a class="boton" target="_blank"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer">
-     Cotizar este mueble
-  </a>
-</div>
+  <!-- ESCRITORIOS MODERNOS -->
+  <h2>Escritorios Modernos</h2>
+  <div class="grid">
+    <div class="producto">
+      <img src="imagenes/escritorio1.jpg">
+      <h3>Moderno 1</h3>
+      <div class="precio">S/ 650</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
 
-<!-- ESCRITORIO EJECUTIVO -->
-<div class="producto">
-  <h3>Escritorio Ejecutivo</h3>
-  <div class="imagen-principal">
-    <img id="img3" src="imagenes/escritorio3.jpg" onclick="toggleZoom(this)">
-  </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
-    <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3',this.src)">
-    <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3',this.src)">
-    <img src="imagenes/escritorio3-3.jpg" onclick="cambiarImagen('img3',this.src)">
-  </div>
-  <p>Elegante escritorio para oficina o negocio.</p>
-  <a class="boton" target="_blank"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo">
-     Cotizar este mueble
-  </a>
-</div>
+    <div class="producto">
+      <img src="imagenes/escritorio2.jpg">
+      <h3>Moderno 2</h3>
+      <div class="precio">S/ 680</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
 
+    <div class="producto">
+      <img src="imagenes/escritorio3.jpg">
+      <h3>Moderno 3</h3>
+      <div class="precio">S/ 720</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/escritorio4.jpg">
+      <h3>Moderno 4</h3>
+      <div class="precio">S/ 750</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- GAMER -->
+  <h2 style="margin-top:60px;">Escritorios Gamer</h2>
+  <div class="grid">
+    <div class="producto">
+      <img src="imagenes/gamer1.jpg">
+      <h3>Gamer 1</h3>
+      <div class="precio">S/ 850</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/gamer2.jpg">
+      <h3>Gamer 2</h3>
+      <div class="precio">S/ 880</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/gamer3.jpg">
+      <h3>Gamer 3</h3>
+      <div class="precio">S/ 920</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/gamer4.jpg">
+      <h3>Gamer 4</h3>
+      <div class="precio">S/ 950</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- EJECUTIVOS -->
+  <h2 style="margin-top:60px;">Escritorios Ejecutivos</h2>
+  <div class="grid">
+    <div class="producto">
+      <img src="imagenes/ejecutivo1.jpg">
+      <h3>Ejecutivo 1</h3>
+      <div class="precio">S/ 980</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/ejecutivo2.jpg">
+      <h3>Ejecutivo 2</h3>
+      <div class="precio">S/ 1,050</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/ejecutivo3.jpg">
+      <h3>Ejecutivo 3</h3>
+      <div class="precio">S/ 1,120</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/ejecutivo4.jpg">
+      <h3>Ejecutivo 4</h3>
+      <div class="precio">S/ 1,200</div>
+      <a class="boton" href="https://wa.me/51XXXXXXXXX">WhatsApp</a>
+    </div>
+  </div>
 </section>
 
-<section class="precios">
-<h2 style="text-align:center;">Precios Referenciales</h2>
-<table>
-<tr><th>Modelo</th><th>Material</th><th>Precio desde</th></tr>
-<tr><td>Escritorio Moderno</td><td>Melamina 18mm</td><td>S/ 450</td></tr>
-<tr><td>Escritorio Gamer</td><td>Melamina reforzada</td><td>S/ 750</td></tr>
-<tr><td>Escritorio Ejecutivo</td><td>Melamina premium</td><td>S/ 980</td></tr>
-</table>
-</section>
-
-<footer>© 2025 Daniel Almonacid — Muebles en Melamina</footer>
-
-<a href="https://wa.me/51914926262" target="_blank"
-   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
-   padding:14px 18px;border-radius:50px;font-weight:bold;text-decoration:none;">
-📲 WhatsApp</a>
+<footer>
+  © 2025 Daniel Almonacid — Escritorios Profesionales
+</footer>
 
 </body>
 </html>
