@@ -12,6 +12,8 @@ body{
   background:#f8fafc;
   color:#1f2937;
 }
+
+/* HEADER */
 header{
   background:#0f172a;
   color:white;
@@ -30,6 +32,7 @@ nav a{
 }
 h1{text-align:center;margin:30px 0;}
 
+/* CATÁLOGO */
 .catalogo{
   max-width:1200px;
   margin:auto;
@@ -45,10 +48,13 @@ h1{text-align:center;margin:30px 0;}
   text-align:center;
   box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
+
+/* IMÁGENES */
 .imagen-principal{
   width:100%;
   max-width:420px;
   margin:15px auto;
+  overflow:hidden;
 }
 .imagen-principal img{
   width:100%;
@@ -56,7 +62,17 @@ h1{text-align:center;margin:30px 0;}
   object-fit:contain;
   border-radius:10px;
   background:#fff;
+  cursor:zoom-in;
+  transition:transform .3s ease;
 }
+
+/* ZOOM */
+.imagen-principal img.zoom{
+  transform:scale(1.6);
+  cursor:zoom-out;
+}
+
+/* MINIATURAS */
 .miniaturas{
   display:flex;
   justify-content:center;
@@ -71,8 +87,11 @@ h1{text-align:center;margin:30px 0;}
   cursor:pointer;
   border:2px solid transparent;
 }
-.miniaturas img:hover{border-color:#22c55e;}
+.miniaturas img:hover{
+  border-color:#22c55e;
+}
 
+/* BOTONES */
 .boton{
   display:inline-block;
   background:#22c55e;
@@ -84,6 +103,7 @@ h1{text-align:center;margin:30px 0;}
   margin-top:15px;
 }
 
+/* PRECIOS */
 .precios{
   max-width:900px;
   margin:40px auto;
@@ -107,6 +127,7 @@ th{
   color:white;
 }
 
+/* FOOTER */
 footer{
   background:#0f172a;
   color:white;
@@ -115,6 +136,7 @@ footer{
   margin-top:40px;
 }
 
+/* RESPONSIVE */
 @media(max-width:600px){
   nav{width:100%;text-align:center;margin-top:10px;}
   nav a{margin:0 10px;}
@@ -124,6 +146,10 @@ footer{
 <script>
 function cambiarImagen(id,src){
   document.getElementById(id).src = src;
+}
+
+function toggleZoom(img){
+  img.classList.toggle("zoom");
 }
 </script>
 </head>
@@ -150,11 +176,11 @@ function cambiarImagen(id,src){
 
 <section class="catalogo">
 
-<!-- ESCRITORIO MODERNO -->
+<!-- MODERNO -->
 <div class="producto">
   <h3>Escritorio Moderno</h3>
   <div class="imagen-principal">
-    <img id="img1" src="imagenes/escritorio1.jpg">
+    <img id="img1" src="imagenes/escritorio1.jpg" onclick="toggleZoom(this)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
@@ -169,11 +195,11 @@ function cambiarImagen(id,src){
   </a>
 </div>
 
-<!-- ESCRITORIO GAMER -->
+<!-- GAMER -->
 <div class="producto">
   <h3>Escritorio Gamer</h3>
   <div class="imagen-principal">
-    <img id="img2" src="imagenes/escritorio2.jpg">
+    <img id="img2" src="imagenes/escritorio2.jpg" onclick="toggleZoom(this)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
@@ -188,11 +214,11 @@ function cambiarImagen(id,src){
   </a>
 </div>
 
-<!-- ESCRITORIO EJECUTIVO -->
+<!-- EJECUTIVO -->
 <div class="producto">
   <h3>Escritorio Ejecutivo</h3>
   <div class="imagen-principal">
-    <img id="img3" src="imagenes/escritorio3.jpg">
+    <img id="img3" src="imagenes/escritorio3.jpg" onclick="toggleZoom(this)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
