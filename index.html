@@ -2,120 +2,136 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Catálogo de Escritorios</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de Escritorios | Daniel Almonacid</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
+  margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:#f2f2f2;
-  color:#222;
+  background:#f8fafc;
+  color:#1f2937;
 }
-
 header{
-  background:#111827;
-  color:#fff;
-  padding:20px;
-  text-align:center;
+  background:#0f172a;
+  color:white;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
 }
-
-nav{
-  margin-top:10px;
-}
-
+header img{height:55px;}
 nav a{
-  color:#fff;
-  margin:0 12px;
+  color:white;
   text-decoration:none;
+  margin-left:20px;
   font-weight:bold;
 }
-
-section{
+h1{text-align:center;margin:30px 0;}
+.catalogo{
   max-width:1200px;
   margin:auto;
-  padding:30px 15px;
-}
-
-h2{
-  text-align:center;
-  margin:40px 0 25px;
-}
-
-.catalogo-pdf{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.catalogo-pdf a{
-  background:#dc2626;
-  color:#fff;
-  padding:12px 20px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.grid{
+  padding:20px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
 }
-
-.card{
-  background:#fff;
-  border-radius:10px;
-  padding:15px;
+.producto{
+  background:white;
+  border-radius:12px;
+  padding:20px;
   text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
-
-.card img{
+.imagen-principal{
   width:100%;
+  max-width:420px;
+  margin:15px auto;
+}
+.imagen-principal img{
+  width:100%;
+  border-radius:10px;
+}
+.miniaturas{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:10px;
+}
+.miniaturas img{
+  width:70px;
+  height:70px;
+  object-fit:cover;
   border-radius:8px;
-  transition:transform .3s ease;
+  cursor:pointer;
+  border:2px solid transparent;
 }
-
-.card img:hover{
-  transform:scale(1.05);
+.miniaturas img:hover{
+  border-color:#22c55e;
 }
-
-.card h3{
-  margin:12px 0 6px;
-}
-
-.precio{
-  font-weight:bold;
-  color:#15803d;
-  margin-bottom:10px;
-}
-
 .boton{
   display:inline-block;
-  background:#16a34a;
-  color:#fff;
-  padding:10px 16px;
-  border-radius:6px;
+  background:#22c55e;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+  margin-top:15px;
 }
-
-footer{
-  background:#111827;
-  color:#fff;
+.precios{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  border-radius:10px;
+  overflow:hidden;
+}
+th,td{
+  padding:14px;
   text-align:center;
-  padding:15px;
+  border-bottom:1px solid #e5e7eb;
+}
+th{
+  background:#0f172a;
+  color:white;
+}
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
   margin-top:40px;
-  font-size:14px;
+}
+@media(max-width:600px){
+  nav{
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+  }
+  nav a{
+    margin:0 10px;
+  }
 }
 </style>
+
+<script>
+function cambiarImagen(id,src){
+  document.getElementById(id).src = src;
+}
+</script>
 </head>
 
 <body>
 
 <header>
-  <h1>Catálogo de Escritorios</h1>
+  <img src="gato.png">
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Nuestra empresa</a>
@@ -123,114 +139,85 @@ footer{
   </nav>
 </header>
 
-<section>
+<h1>Catálogo de Escritorios</h1>
 
-  <div class="catalogo-pdf">
-    <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank">
-      Descargar catálogo PDF
-    </a>
+<div style="text-align:center;margin-bottom:30px;">
+  <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank"
+     style="background:#111;color:white;padding:14px 26px;border-radius:10px;font-weight:bold;text-decoration:none;">
+     📄 Descargar Catálogo en PDF
+  </a>
+</div>
+
+<section class="catalogo">
+
+<!-- MODERNO -->
+<div class="producto">
+  <h3>Escritorio Moderno</h3>
+  <div class="imagen-principal">
+    <img id="img1" src="imagenes/escritorio1.jpg">
   </div>
-
-  <!-- MODERNOS -->
-  <h2>Escritorios Modernos</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="imagenes/escritorio1.jpg">
-      <h3>Moderno 1</h3>
-      <div class="precio">S/ 650</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/escritorio2.jpg">
-      <h3>Moderno 2</h3>
-      <div class="precio">S/ 680</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/escritorio3.jpg">
-      <h3>Moderno 3</h3>
-      <div class="precio">S/ 720</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/escritorio4.jpg">
-      <h3>Moderno 4</h3>
-      <div class="precio">S/ 750</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
+    <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('img1',this.src)">
+    <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('img1',this.src)">
   </div>
+  <p>Diseño moderno en melamina, compacto y funcional.</p>
+  <a class="boton" target="_blank"
+     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno">
+     Cotizar este mueble
+  </a>
+</div>
 
-  <!-- GAMER -->
-  <h2>Escritorios Gamer</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="imagenes/gamer1.jpg">
-      <h3>Gamer 1</h3>
-      <div class="precio">S/ 850</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/gamer2.jpg">
-      <h3>Gamer 2</h3>
-      <div class="precio">S/ 880</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/gamer3.jpg">
-      <h3>Gamer 3</h3>
-      <div class="precio">S/ 920</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/gamer4.jpg">
-      <h3>Gamer 4</h3>
-      <div class="precio">S/ 950</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
+<!-- GAMER -->
+<div class="producto">
+  <h3>Escritorio Gamer</h3>
+  <div class="imagen-principal">
+    <img id="img2" src="imagenes/escritorio2.jpg">
   </div>
-
-  <!-- EJECUTIVOS -->
-  <h2>Escritorios Ejecutivos</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="imagenes/ejecutivo1.jpg">
-      <h3>Ejecutivo 1</h3>
-      <div class="precio">S/ 980</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/ejecutivo2.jpg">
-      <h3>Ejecutivo 2</h3>
-      <div class="precio">S/ 1,050</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/ejecutivo3.jpg">
-      <h3>Ejecutivo 3</h3>
-      <div class="precio">S/ 1,120</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
-
-    <div class="card">
-      <img src="imagenes/ejecutivo4.jpg">
-      <h3>Ejecutivo 4</h3>
-      <div class="precio">S/ 1,200</div>
-      <a class="boton" href="https://wa.me/51XXXXXXXXX">Cotizar</a>
-    </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
+    <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('img2',this.src)">
+    <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('img2',this.src)">
   </div>
+  <p>Amplio escritorio gamer ideal para setup completo.</p>
+  <a class="boton" target="_blank"
+     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer">
+     Cotizar este mueble
+  </a>
+</div>
+
+<!-- EJECUTIVO -->
+<div class="producto">
+  <h3>Escritorio Ejecutivo</h3>
+  <div class="imagen-principal">
+    <img id="img3" src="imagenes/escritorio3.jpg">
+  </div>
+  <div class="miniaturas">
+    <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
+    <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('img3',this.src)">
+    <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('img3',this.src)">
+  </div>
+  <p>Elegante escritorio para oficina o negocio.</p>
+  <a class="boton" target="_blank"
+     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo">
+     Cotizar este mueble
+  </a>
+</div>
 
 </section>
 
+<section class="precios">
+<h2 style="text-align:center;">Precios Referenciales</h2>
+<table>
+<tr><th>Modelo</th><th>Material</th><th>Precio desde</th></tr>
+<tr><td>Escritorio Moderno</td><td>Melamina 18mm</td><td>S/ 450</td></tr>
+<tr><td>Escritorio Gamer</td><td>Melamina reforzada</td><td>S/ 750</td></tr>
+<tr><td>Escritorio Ejecutivo</td><td>Melamina premium</td><td>S/ 980</td></tr>
+</table>
+</section>
+
 <footer>
-  © 2025 Daniel Almonacid
+© 2025 Daniel Almonacid — Muebles en Melamina
 </footer>
 
 </body>
