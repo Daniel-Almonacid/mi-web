@@ -23,9 +23,7 @@ header{
   align-items:center;
   flex-wrap:wrap;
 }
-
 header img{height:55px;}
-
 nav a{
   color:white;
   text-decoration:none;
@@ -34,31 +32,60 @@ nav a{
 }
 
 /* CONTENIDO */
-.contenido{
-  max-width:900px;
+.contenedor{
+  max-width:700px;
   margin:40px auto;
-  padding:20px;
-  text-align:center;
-}
-
-.bloque-contacto{
   background:white;
   padding:30px;
   border-radius:12px;
   box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
+h1{text-align:center;margin-bottom:20px;}
 
-/* BOTON */
-.btn-whatsapp{
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+input, textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  font-size:15px;
+}
+textarea{resize:vertical;min-height:120px;}
+
+button{
+  background:#22c55e;
+  color:white;
+  border:none;
+  padding:14px;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+button:hover{background:#16a34a;}
+
+/* WHATSAPP */
+.whatsapp-box{
+  margin-top:30px;
+  text-align:center;
+  background:#ecfdf5;
+  border:2px solid #22c55e;
+  padding:20px;
+  border-radius:12px;
+}
+.whatsapp-box a{
   display:inline-block;
+  margin-top:10px;
   background:#25D366;
   color:white;
-  padding:15px 28px;
+  padding:14px 24px;
   border-radius:50px;
-  font-size:18px;
   font-weight:bold;
   text-decoration:none;
-  margin-top:20px;
+  font-size:16px;
 }
 
 /* FOOTER */
@@ -70,7 +97,6 @@ footer{
   margin-top:40px;
 }
 
-/* RESPONSIVE */
 @media(max-width:600px){
   nav{width:100%;text-align:center;margin-top:10px;}
   nav a{margin:0 10px;}
@@ -81,7 +107,7 @@ footer{
 <body>
 
 <header>
-  <img src="gato.png" alt="Logo Daniel">
+  <img src="gato.png">
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Nuestra empresa</a>
@@ -89,23 +115,30 @@ footer{
   </nav>
 </header>
 
-<section class="contenido">
-  <div class="bloque-contacto">
-    <h1>Estamos listos para atenderte</h1>
-    <p>Cuéntanos qué tipo de escritorio necesitas y te asesoramos sin compromiso.</p>
+<div class="contenedor">
+  <h1>Contáctanos</h1>
 
-    <p><strong>📍 Atención personalizada – Fabricación a medida</strong></p>
+  <!-- FORMULARIO (NO muestra tu correo) -->
+  <form action="https://formspree.io/f/xregwozo" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+    <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
 
-    <a class="btn-whatsapp"
-       href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios"
+  <!-- WHATSAPP PROFESIONAL -->
+  <div class="whatsapp-box">
+    <h3>📲 Atención inmediata por WhatsApp</h3>
+    <p>Escríbenos directamente para cotizaciones rápidas</p>
+    <a href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios"
        target="_blank">
-       📲 Escribir por WhatsApp
+       Chatear por WhatsApp
     </a>
   </div>
-</section>
+</div>
 
 <footer>
-  © 2025 Daniel Almonacid — Muebles en Melamina
+© 2025 Daniel Almonacid — Muebles en Melamina
 </footer>
 
 </body>
