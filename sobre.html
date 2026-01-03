@@ -1,128 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Nuestra Empresa | Muebles en Melamina</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros | Daniel Almonacid</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f5f5;
+  color:#1f2937;
+}
 
-    body {
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
+header{
+  background:#0f172a;
+  color:white;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
-    /* ===== HEADER ===== */
-    header {
-      background: #111;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+header img{height:55px;}
 
-    header img {
-      height: 50px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
 
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.hero{
+  background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)), url('imagenes/escritorio1.jpg') center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
 
-    nav a:hover {
-      color: #25D366;
-    }
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
 
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-      url("imagenes/escritorio1.jpg") center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
+.hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+}
 
-    .hero h1 {
-      font-size: 40px;
-    }
+.contenido{
+  max-width:1000px;
+  margin:50px auto;
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
 
-    /* ===== CONTENIDO ===== */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+.card{
+  background:white;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
 
-    .box {
-      background: white;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,.1);
-    }
+.card h3{color:#111;}
 
-    .box h2 {
-      margin-bottom: 15px;
-      color: #111;
-    }
+.boton{
+  display:inline-block;
+  background:#25D366;
+  color:white;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:20px;
+}
 
-    .box ul {
-      margin-left: 20px;
-    }
-
-    /* ===== BOTÓN WHATSAPP ===== */
-    .whatsapp {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .whatsapp:hover {
-      background: #1ebe5d;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 28px;
-      }
-
-      nav a {
-        margin-left: 10px;
-      }
-    }
-  </style>
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="gato.png" alt="Logo">
+  <img src="gato.png" alt="Logo Daniel">
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Nuestra empresa</a>
@@ -131,50 +101,39 @@
 </header>
 
 <section class="hero">
-  <h1>Fabricantes de Muebles en Melamina</h1>
+  <h1>Fabricamos Escritorios que Transforman Espacios</h1>
+  <p>Somos una empresa dedicada a la fabricación de escritorios en melamina de alta calidad, diseñados a medida según las necesidades de cada cliente.</p>
 </section>
 
-<section class="container">
+<section class="contenido">
 
-  <div class="box">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      Somos una empresa dedicada a la fabricación de muebles en melamina,
-      especializada en escritorios modernos, gamer y ejecutivos.
-      Trabajamos con materiales de calidad, diseños funcionales y acabados profesionales.
-    </p>
+  <div class="card">
+    <h3>🎯 Nuestra misión</h3>
+    <p>Ofrecer muebles funcionales, modernos y resistentes que mejoren la productividad y el confort de hogares, oficinas y espacios gamer.</p>
   </div>
 
-  <div class="box">
-    <h2>¿Qué fabricamos?</h2>
-    <ul>
-      <li>Escritorios modernos y personalizados</li>
-      <li>Escritorios gamer reforzados</li>
-      <li>Escritorios ejecutivos</li>
-      <li>Muebles a medida para hogar y oficina</li>
-    </ul>
+  <div class="card">
+    <h3>👁 Nuestra visión</h3>
+    <p>Convertirnos en una marca reconocida a nivel nacional por la calidad de nuestros muebles y la excelencia en atención al cliente.</p>
   </div>
 
-  <div class="box">
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li>✔️ Melamina de alta calidad</li>
-      <li>✔️ Diseños modernos y funcionales</li>
-      <li>✔️ Atención personalizada</li>
-      <li>✔️ Entregas responsables</li>
-    </ul>
+  <div class="card">
+    <h3>🪵 Materiales de calidad</h3>
+    <p>Trabajamos con melamina de 18 mm y acabados premium que garantizan durabilidad y elegancia.</p>
+  </div>
 
-    <a class="whatsapp"
-       href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20un%20mueble"
-       target="_blank">
-      📲 Cotiza por WhatsApp
+  <div class="card">
+    <h3>🤝 Atención personalizada</h3>
+    <p>Cada proyecto es único. Te asesoramos directamente por WhatsApp para crear el escritorio ideal para ti.</p>
+    <a class="boton" href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios" target="_blank">
+      📲 Escríbenos ahora
     </a>
   </div>
 
 </section>
 
 <footer>
-  © 2025 | Muebles en Melamina – Daniel Almonacid
+  © 2025 Daniel Almonacid — Muebles en Melamina
 </footer>
 
 </body>
