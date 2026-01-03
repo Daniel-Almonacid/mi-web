@@ -51,13 +51,19 @@ h1{text-align:center;margin:30px 0;}
   box-shadow:0 6px 18px rgba(0,0,0,.1);
 }
 
-/* IMAGEN PRINCIPAL */
+/* IMAGEN PRINCIPAL + ZOOM */
 .imagen-principal img{
   width:100%;
   height:260px;
   object-fit:contain;
   border-radius:10px;
   box-shadow:0 4px 12px rgba(0,0,0,.15);
+  cursor:zoom-in;
+  transition:transform .25s ease;
+}
+.imagen-principal img.zoom{
+  transform:scale(1.5);
+  cursor:zoom-out;
 }
 
 /* MINIATURAS */
@@ -117,11 +123,22 @@ footer{
   padding:20px;
   margin-top:40px;
 }
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{width:100%;text-align:center;margin-top:10px;}
+  nav a{margin:0 10px;}
+  .imagen-principal img{height:220px;}
+}
 </style>
 
 <script>
 function cambiarImagen(id,src){
   document.getElementById(id).src = src;
+}
+
+function toggleZoom(img){
+  img.classList.toggle("zoom");
 }
 </script>
 </head>
@@ -153,7 +170,7 @@ function cambiarImagen(id,src){
 <div class="producto">
   <h3>Escritorio Moderno</h3>
   <div class="imagen-principal">
-    <img id="img1" src="imagenes/escritorio1.jpg">
+    <img id="img1" src="imagenes/escritorio1.jpg" onclick="toggleZoom(this)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
@@ -172,7 +189,7 @@ function cambiarImagen(id,src){
 <div class="producto">
   <h3>Escritorio Gamer</h3>
   <div class="imagen-principal">
-    <img id="img2" src="imagenes/escritorio2.jpg">
+    <img id="img2" src="imagenes/escritorio2.jpg" onclick="toggleZoom(this)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
@@ -191,7 +208,7 @@ function cambiarImagen(id,src){
 <div class="producto">
   <h3>Escritorio Ejecutivo</h3>
   <div class="imagen-principal">
-    <img id="img3" src="imagenes/escritorio3.jpg">
+    <img id="img3" src="imagenes/escritorio3.jpg" onclick="toggleZoom(this)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
