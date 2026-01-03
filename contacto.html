@@ -1,96 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Daniel Almonacid</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+}
 
-    nav {
-      background: #222;
-      padding: 15px;
-    }
+/* HEADER */
+header{
+  background:#0f172a;
+  color:white;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header img{height:55px;}
 
-    nav a:hover {
-      color: #00c3ff;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
 
-    .contenedor {
-      padding: 40px 20px;
-    }
+/* CONTENIDO */
+.contenido{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+  text-align:center;
+}
 
-    form {
-      max-width: 400px;
-      margin: auto;
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
+.bloque-contacto{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
+/* BOTON */
+.btn-whatsapp{
+  display:inline-block;
+  background:#25D366;
+  color:white;
+  padding:15px 28px;
+  border-radius:50px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-top:20px;
+}
 
-    button {
-      margin-top: 15px;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      background: #00c3ff;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
 
-    button:hover {
-      background: #0099cc;
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{width:100%;text-align:center;margin-top:10px;}
+  nav a{margin:0 10px;}
+}
+</style>
 </head>
 
 <body>
 
+<header>
+  <img src="gato.png" alt="Logo Daniel">
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="sobre.html">Sobre mí</a>
+    <a href="sobre.html">Nuestra empresa</a>
     <a href="contacto.html">Contacto</a>
   </nav>
+</header>
 
-  <div class="contenedor">
-    <h1>Contacto</h1>
+<section class="contenido">
+  <div class="bloque-contacto">
+    <h1>Estamos listos para atenderte</h1>
+    <p>Cuéntanos qué tipo de escritorio necesitas y te asesoramos sin compromiso.</p>
 
-    <form action="https://formspree.io/f/xregwozo" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
+    <p><strong>📍 Atención personalizada – Fabricación a medida</strong></p>
 
-    <p style="margin-top:15px; font-size:14px;">
-      Te responderé pronto 😄
-    </p>
+    <a class="btn-whatsapp"
+       href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios"
+       target="_blank">
+       📲 Escribir por WhatsApp
+    </a>
   </div>
+</section>
+
+<footer>
+  © 2025 Daniel Almonacid — Muebles en Melamina
+</footer>
 
 </body>
 </html>
