@@ -8,7 +8,7 @@
 <style>
 body{
   margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
   background:#f8fafc;
   color:#1f2937;
 }
@@ -120,18 +120,24 @@ th{
   color:white;
 }
 
-/* MODAL ZOOM */
+/* MODAL ZOOM — CORREGIDO */
 #modal{
-  display:none;
   position:fixed;
-  z-index:9999;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
+  inset:0;
   background:rgba(0,0,0,.85);
+  display:flex;
   align-items:center;
   justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:.3s;
+  z-index:9999;
+}
+#modal.activo{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
 }
 #modal img{
   max-width:90%;
@@ -149,7 +155,6 @@ footer{
   margin-top:40px;
 }
 
-/* RESPONSIVE */
 @media(max-width:600px){
   nav{width:100%;text-align:center;margin-top:10px;}
   nav a{margin:0 10px;}
@@ -161,12 +166,14 @@ function cambiarImagen(id,src){
   document.getElementById(id).src = src;
 }
 function zoomImagen(src){
+  const modal = document.getElementById('modal');
   document.getElementById('imgZoom').src = src;
-  document.getElementById('modal').style.display = 'flex';
+  modal.classList.add('activo');
 }
 function cerrarZoom(){
-  document.getElementById('modal').style.display = 'none';
+  document.getElementById('modal').classList.remove('activo');
 }
+window.onload = () => cerrarZoom(); // elimina overlay fantasma
 </script>
 </head>
 
@@ -191,65 +198,21 @@ function cerrarZoom(){
 
 <h2>Escritorio Moderno</h2>
 <section class="catalogo">
-
-<div class="producto">
-  <h3>Moderno 1</h3>
-  <div class="imagen-principal">
-    <img id="m1" src="imagenes/escritorio1.jpg" onclick="zoomImagen(this.src)">
+  <div class="producto">
+    <h3>Moderno 1</h3>
+    <div class="imagen-principal">
+      <img id="m1" src="imagenes/escritorio1.jpg" onclick="zoomImagen(this.src)">
+    </div>
+    <div class="miniaturas">
+      <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('m1',this.src)">
+      <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('m1',this.src)">
+      <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('m1',this.src)">
+    </div>
+    <a class="boton" target="_blank"
+       href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno%201">
+       Cotizar este mueble
+    </a>
   </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('m1',this.src)">
-    <img src="imagenes/escritorio1-1.jpg" onclick="cambiarImagen('m1',this.src)">
-    <img src="imagenes/escritorio1-2.jpg" onclick="cambiarImagen('m1',this.src)">
-  </div>
-  <a class="boton" target="_blank"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Moderno%201">
-     Cotizar este mueble
-  </a>
-</div>
-
-</section>
-
-<h2>Escritorio Gamer</h2>
-<section class="catalogo">
-
-<div class="producto">
-  <h3>Gamer 1</h3>
-  <div class="imagen-principal">
-    <img id="g1" src="imagenes/escritorio2.jpg" onclick="zoomImagen(this.src)">
-  </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('g1',this.src)">
-    <img src="imagenes/escritorio2-1.jpg" onclick="cambiarImagen('g1',this.src)">
-    <img src="imagenes/escritorio2-2.jpg" onclick="cambiarImagen('g1',this.src)">
-  </div>
-  <a class="boton" target="_blank"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Gamer%201">
-     Cotizar este mueble
-  </a>
-</div>
-
-</section>
-
-<h2>Escritorio Ejecutivo</h2>
-<section class="catalogo">
-
-<div class="producto">
-  <h3>Ejecutivo 1</h3>
-  <div class="imagen-principal">
-    <img id="e1" src="imagenes/escritorio3.jpg" onclick="zoomImagen(this.src)">
-  </div>
-  <div class="miniaturas">
-    <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('e1',this.src)">
-    <img src="imagenes/escritorio3-1.jpg" onclick="cambiarImagen('e1',this.src)">
-    <img src="imagenes/escritorio3-2.jpg" onclick="cambiarImagen('e1',this.src)">
-  </div>
-  <a class="boton" target="_blank"
-     href="https://wa.me/51914926262?text=Hola,%20quiero%20cotizar%20el%20Escritorio%20Ejecutivo%201">
-     Cotizar este mueble
-  </a>
-</div>
-
 </section>
 
 <section class="precios">
@@ -264,7 +227,6 @@ function cerrarZoom(){
 
 <footer>© 2025 Daniel Almonacid — Muebles en Melamina</footer>
 
-<!-- MODAL -->
 <div id="modal" onclick="cerrarZoom()">
   <img id="imgZoom">
 </div>
