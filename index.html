@@ -23,7 +23,7 @@ header{
   align-items:center;
   flex-wrap:wrap;
 }
-header img{height:60px;}
+header img{height:65px;}
 nav a{
   color:white;
   text-decoration:none;
@@ -129,7 +129,8 @@ footer{
   display:none;
   position:fixed;
   top:0;left:0;
-  width:100%;height:100%;
+  width:100%;
+  height:100%;
   background:rgba(0,0,0,0.85);
   justify-content:center;
   align-items:center;
@@ -144,7 +145,7 @@ footer{
   position:absolute;
   top:20px;
   right:30px;
-  font-size:35px;
+  font-size:38px;
   color:white;
   cursor:pointer;
 }
@@ -177,9 +178,18 @@ function cambiarImagen(id,src){
 }
 
 function abrirModal(src){
-  document.getElementById("modal-img").src = src;
-  document.getElementById("modal").style.display = "flex";
+  const modal = document.getElementById("modal");
+  const img = document.getElementById("modal-img");
+  img.src = src;
+  modal.style.display = "flex";
 }
+
+document.addEventListener("click", function(e){
+  const modal = document.getElementById("modal");
+  if(modal.style.display === "flex" && e.target === modal){
+    modal.style.display = "none";
+  }
+});
 
 function cerrarModal(){
   document.getElementById("modal").style.display = "none";
@@ -190,7 +200,7 @@ function cerrarModal(){
 <body>
 
 <header>
-  <img src="gato.png">
+  <img src="gato.png" alt="Logo">
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Nuestra empresa</a>
@@ -266,7 +276,7 @@ function cerrarModal(){
 </a>
 
 <!-- MODAL -->
-<div id="modal" onclick="cerrarModal()">
+<div id="modal">
   <span onclick="cerrarModal()">×</span>
   <img id="modal-img">
 </div>
