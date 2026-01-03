@@ -12,6 +12,8 @@ body{
   background:#f8fafc;
   color:#1f2937;
 }
+
+/* HEADER */
 header{
   background:#0f172a;
   color:white;
@@ -29,7 +31,10 @@ nav a{
   font-weight:600;
 }
 nav a:hover{color:#22c55e;}
+
 h1{text-align:center;margin:35px 0;font-size:2.2em;}
+
+/* CATALOGO */
 .catalogo{
   max-width:1200px;
   margin:auto;
@@ -38,6 +43,7 @@ h1{text-align:center;margin:35px 0;font-size:2.2em;}
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:30px;
 }
+
 .producto{
   background:white;
   border-radius:14px;
@@ -45,10 +51,13 @@ h1{text-align:center;margin:35px 0;font-size:2.2em;}
   text-align:center;
   box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
+
+/* IMAGENES */
 .imagen-principal{
   width:100%;
   max-width:420px;
   margin:15px auto;
+  cursor:zoom-in;
 }
 .imagen-principal img{
   width:100%;
@@ -56,6 +65,7 @@ h1{text-align:center;margin:35px 0;font-size:2.2em;}
   border-radius:12px;
   object-fit:contain;
 }
+
 .miniaturas{
   display:flex;
   justify-content:center;
@@ -74,6 +84,8 @@ h1{text-align:center;margin:35px 0;font-size:2.2em;}
 .miniaturas img:hover{
   border-color:#22c55e;
 }
+
+/* BOTON */
 .boton{
   display:inline-block;
   background:#22c55e;
@@ -85,6 +97,8 @@ h1{text-align:center;margin:35px 0;font-size:2.2em;}
   margin-top:18px;
 }
 .boton:hover{background:#16a34a;}
+
+/* PRECIOS */
 .precios{
   max-width:900px;
   margin:40px auto;
@@ -98,15 +112,10 @@ table{
   border-radius:12px;
   overflow:hidden;
 }
-th,td{
-  padding:15px;
-  text-align:center;
-}
-th{
-  background:#0f172a;
-  color:white;
-}
+th,td{padding:15px;text-align:center;}
+th{background:#0f172a;color:white;}
 tr:nth-child(even){background:#f1f5f9;}
+
 footer{
   background:#0f172a;
   color:white;
@@ -114,9 +123,51 @@ footer{
   padding:22px;
   margin-top:40px;
 }
+
+/* MODAL ZOOM */
+#modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+#modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+}
+#modal span{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:35px;
+  color:white;
+  cursor:pointer;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 20px;
+  border-radius:50px;
+  font-size:16px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,.35);
+  z-index:999;
+}
+
 @media(max-width:600px){
   nav{width:100%;text-align:center;margin-top:10px;}
-  nav a{margin:0 10px;display:inline-block;}
+  nav a{margin:0 10px;}
 }
 </style>
 
@@ -124,13 +175,22 @@ footer{
 function cambiarImagen(id,src){
   document.getElementById(id).src = src;
 }
+
+function abrirModal(src){
+  document.getElementById("modal-img").src = src;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function cerrarModal(){
+  document.getElementById("modal").style.display = "none";
+}
 </script>
 </head>
 
 <body>
 
 <header>
-  <img src="gato.png" alt="Logo Daniel Almonacid">
+  <img src="gato.png">
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre.html">Nuestra empresa</a>
@@ -140,20 +200,13 @@ function cambiarImagen(id,src){
 
 <h1>Catálogo de Escritorios</h1>
 
-<div style="text-align:center;margin-bottom:35px;">
-  <a href="catalogo-escritorios-daniel-almonacid.pdf" target="_blank"
-     style="background:#111;color:white;padding:15px 28px;border-radius:12px;font-weight:bold;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3);">
-     📄 Descargar Catálogo en PDF
-  </a>
-</div>
-
-<section id="catalogo" class="catalogo">
+<section class="catalogo">
 
 <!-- ESCRITORIO MODERNO -->
 <div class="producto">
   <h3>Escritorio Moderno</h3>
   <div class="imagen-principal">
-    <img id="img1" src="imagenes/escritorio1.jpg">
+    <img id="img1" src="imagenes/escritorio1.jpg" onclick="abrirModal(this.src)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio1.jpg" onclick="cambiarImagen('img1',this.src)">
@@ -171,7 +224,7 @@ function cambiarImagen(id,src){
 <div class="producto">
   <h3>Escritorio Gamer</h3>
   <div class="imagen-principal">
-    <img id="img2" src="imagenes/escritorio2.jpg">
+    <img id="img2" src="imagenes/escritorio2.jpg" onclick="abrirModal(this.src)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio2.jpg" onclick="cambiarImagen('img2',this.src)">
@@ -189,7 +242,7 @@ function cambiarImagen(id,src){
 <div class="producto">
   <h3>Escritorio Ejecutivo</h3>
   <div class="imagen-principal">
-    <img id="img3" src="imagenes/escritorio3.jpg">
+    <img id="img3" src="imagenes/escritorio3.jpg" onclick="abrirModal(this.src)">
   </div>
   <div class="miniaturas">
     <img src="imagenes/escritorio3.jpg" onclick="cambiarImagen('img3',this.src)">
@@ -205,28 +258,18 @@ function cambiarImagen(id,src){
 
 </section>
 
-<section class="precios">
-<h2 style="text-align:center;">Precios Referenciales</h2>
-<table>
-<tr><th>Modelo</th><th>Material</th><th>Precio desde</th></tr>
-<tr><td>Escritorio Moderno</td><td>Melamina 18mm</td><td>S/ 450</td></tr>
-<tr><td>Escritorio Gamer</td><td>Melamina reforzada</td><td>S/ 750</td></tr>
-<tr><td>Escritorio Ejecutivo</td><td>Melamina premium</td><td>S/ 980</td></tr>
-</table>
-</section>
+<footer>© 2025 Daniel Almonacid — Muebles en Melamina</footer>
 
-<footer>
-© 2025 Daniel Almonacid — Muebles en Melamina
-</footer>
-
-<a href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios"
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
-          padding:15px 20px;border-radius:50px;font-size:16px;
-          font-weight:bold;text-decoration:none;
-          box-shadow:0 4px 12px rgba(0,0,0,.35);z-index:999;">
-  📲 WhatsApp
+<a class="whatsapp" target="_blank"
+   href="https://wa.me/51914926262?text=Hola,%20quiero%20información%20sobre%20sus%20escritorios">
+📲 WhatsApp
 </a>
+
+<!-- MODAL -->
+<div id="modal" onclick="cerrarModal()">
+  <span onclick="cerrarModal()">×</span>
+  <img id="modal-img">
+</div>
 
 </body>
 </html>
